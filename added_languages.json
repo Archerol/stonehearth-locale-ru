@@ -1,12 +1,8 @@
 {
    "languages": {
-      "en-XA": {
-         "display_name": "[!!Ēņģľĭšħ!!]",
-         "path": "/startermod_locale/translations/en-XA.json"
-      },
-      "en-DEV": {
-         "display_name": "English(Dev)",
-         "path": "/startermod_locale/translations/en-DEV.json"
+      "ru": {
+         "display_name": "Русский",
+         "path": "/startermod_locale/translations/ru.json"
       }
    }
 }

@@ -1,0 +1,13 @@
+
+@font-face {
+  font-family: 'SeymourOneRegular';
+  src: url('SeymourOne-Regular.eot');
+  src: url('SeymourOne-Regular.eot?#iefix') format('embedded-opentype'),
+       url('SeymourOne-Regular.woff') format('woff'),
+       url('SeymourOne-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: condensed;
+  font-size-adjust: 2;
+}
+
