@@ -63,21 +63,20 @@ i18n.addPostProcessor("localizeEntityName", function(value, key, isFound, opts) 
             var translate;
             var defaultWordCase = 'i';
             
-            // if token hasn't got a Case
-            if (wordCase === false) {
-               return i18n.t(token, opts);
+            // if token has a Case -> check this Case
+            if (wordCase !== false) 
+            {
+               translate = i18n.t(token.slice(0, -1) + '.' + wordCase + ')', opts);
+               if (translate !== opts.defaultValue) {
+                  return translate;
+               } 
             } 
-
-            // choose the Case
-            translate = i18n.t(token.slice(0, -1) + '.' + wordCase + ')', opts);
-            if (translate !== opts.defaultValue) {
-               return translate;
-            } 
-
-            // choose Default Case
-            translate = i18n.t(token.slice(0, -1) + '.' + defaultWordCase + ')', opts);
-            if (translate !== opts.defaultValue) {
-              return translate;
+            else  // if token without a Case -> check Default Case
+            {
+               translate = i18n.t(token.slice(0, -1) + '.' + defaultWordCase + ')', opts);
+               if (translate !== opts.defaultValue) {
+                 return translate;
+               }
             }
 
             // hasn't got Cases -> default Behavior 

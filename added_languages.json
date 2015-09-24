@@ -2,7 +2,7 @@
    "languages": {
       "ru": {
          "display_name": "Русский",
-         "path": "/startermod_locale/translations/ru.json"
+         "path": "file(translations/ru.json)"
       }
    }
 }

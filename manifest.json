@@ -8,7 +8,6 @@
    },
    "ui": {
       "less": [
-         "file(ui/game/citizens/citizens.less)",
          "file(ui/root/css/variables.less)"
       ],
       "js": [
