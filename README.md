@@ -1,4 +1,4 @@
-#### IN DEVELOPMENT (~5%)
+#### IN TRANSLATING (~5%)
 
 #### Mod add Russian Language to Stoneharth (alpha 12+).
 
