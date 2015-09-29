@@ -23,7 +23,7 @@ $.getJSON('/stonehearth/locales/supported_languages.json', function(data) {
          for (var i = 0; i < languageData.paths.length; i++) {
 
             $.getJSON(languageData.paths[i], function(data) {
-               $.extend(resource, data);
+               $.extend(true, resource, data);
                count++;
 
                if (languageData.paths.length == count) {
