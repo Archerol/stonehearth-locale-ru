@@ -1,0 +1,51 @@
+{
+	"ai": {
+		"actions": {
+			"status_text": {
+				"chase_entity": "преследует: [name(data.target)]",
+				"eat_item": "ест: [name(data.target)]",
+				"fill_storage": "filling [name(data.target)] | (убирает на склад: [name(data.target)])",
+				"restock_stockpile": "пополняет запасы: [name(data.target)]",
+				"harvest_crop": "собирает: [name(data.target)]",
+				"harvest_resource": "собирает: [name(data.target)]",
+				"harvest_resource_node": "собирает: [name(data.target)]",
+				"light_firepit": "поджигает: [name(data.target)]",
+				"place_item_on_structure": "устанавливает: [name(data.target)]",
+				"work_at_workshop": "изготавливает: [str(data.craftable_name)]",
+				"attack_melee_adjacent": "атакует: [name(data.target)]",
+				"resting_by_fire": "отдыхает у костра",
+				"claiming_animal": "ловит животное",
+				"looking_for_animals": "в поисках зверей",
+				"collect_ingredient": "собирает ингредиенты",
+				"build_workshop": "изготавливает верстак",
+				"death": "умираю! о нет!",
+				"eat": "собирает еду",
+				"find_stray_animal": "в поисках заблудившихся животных",
+				"harvest_field": "собирает урожай",
+				"idle": "думает чем бы заняться",
+				"patrol": "патрулирует территорию",
+				"plant_crop": "садит растения",
+				"return_animals": "возвращает животных на пастбище",
+				"combat": "врывается в битву",
+				"cower": "съежился от страха",
+				"flee": "убегает!",
+				"panick": "испуган!",
+				"mine": "копает",
+				"sleep_in_bed": "спит",
+				"sleep_on_ground": "спит на земле",
+				"check_bait_trap": "проверяет капкан",
+				"set_bait_trap": "устанавливает капкан",
+				"survey_trapping_grounds": "осматривает капканы",
+				"steal_bait": "крадет приманку",
+				"build_ladder": "строит лестницу",
+				"promote": "promoting |(помогает)",
+				"move_item_to_storage": "убирает предметы на склад",
+				"teardown_ladder": "убирает лестницу",
+				"drop_item_near_workshop": "clearing workshop",
+				"fabricate_structure": "строит",
+				"teardown_structure": "сносит здание",
+				"feed_pasture_animals": "кормит животных"
+			}
+		}
+	}
+}
