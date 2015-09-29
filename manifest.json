@@ -11,7 +11,8 @@
          "file(ui/root/css/variables.less)"
       ],
       "js": [
-         "file(ui/root/js/helpers.js)"
+         "file(ui/root/js/helpers.js)",
+         "file(ui/root/js/loadLocales.js)"
       ]
    }
 }
