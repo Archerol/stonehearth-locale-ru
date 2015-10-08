@@ -2,8 +2,11 @@
    "languages": {
       "ru": {
          "display_name": "Русский",
-         "path": [
-            "file(translations/ru-RU.json)"
+
+         "paths": [
+            "file(translations/ru/stonehearth.json)",
+            "file(translations/ru/ai.json)",
+            "file(translations/ru/berry_bush.json)"
          ]
       }
    }

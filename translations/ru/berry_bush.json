@@ -1,0 +1,23 @@
+{
+   "ai": {
+      "actions": {
+         "status_text": {
+            "harvest_resource": "собирает [name(data.target|v)]"
+         }
+      }
+   },
+
+
+   "entities": {
+      "plants": {
+         "berry_bush": {
+            "display_name": "Ягодный куст",
+            "display_name_": {
+               "v": "Ягоды с ягодного куста"
+            },
+            "description": "Можно собрать немного ягод.",
+            "unripe_description": "Ещё не созрел."
+         }
+      }
+   }
+}
