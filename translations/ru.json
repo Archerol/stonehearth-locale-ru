@@ -1,147 +1,196 @@
 {
+  "ai": {
+      "actions": {
+          "status_text": {
+              "chase_entity": "преследует: [name(data.target)]",
+              "eat_item": "ест: [name(data.target)]",
+              "fill_storage": "filling [name(data.target)] | (убирает на склад: [name(data.target)])",
+              "restock_stockpile": "пополняет запасы: [name(data.target)]",
+              "harvest_crop": "собирает: [name(data.target)]",
+              "harvest_resource": "собирает: [name(data.target)]",
+              "harvest_resource_node": "собирает: [name(data.target)]",
+              "light_firepit": "поджигает: [name(data.target)]",
+              "place_item_on_structure": "устанавливает: [name(data.target)]",
+              "work_at_workshop": "изготавливает: [str(data.craftable_name)]",
+              "attack_melee_adjacent": "атакует: [name(data.target)]",
+              "resting_by_fire": "отдыхает у костра",
+              "claiming_animal": "ловит животное",
+              "looking_for_animals": "в поисках зверей",
+              "collect_ingredient": "собирает ингредиенты",
+              "build_workshop": "изготавливает верстак",
+              "death": "умираю! о нет!",
+              "eat": "собирает еду",
+              "find_stray_animal": "в поисках заблудившихся животных",
+              "harvest_field": "собирает урожай",
+              "idle": "думает чем бы заняться",
+              "patrol": "патрулирует территорию",
+              "plant_crop": "садит растения",
+              "return_animals": "возвращает животных на пастбище",
+              "combat": "врывается в битву",
+              "cower": "съежился от страха",
+              "flee": "убегает!",
+              "panick": "испуган!",
+              "mine": "копает",
+              "sleep_in_bed": "спит",
+              "sleep_on_ground": "спит на земле",
+              "check_bait_trap": "проверяет капкан",
+              "set_bait_trap": "устанавливает капкан",
+              "survey_trapping_grounds": "осматривает капканы",
+              "steal_bait": "крадет приманку",
+              "build_ladder": "строит лестницу",
+              "promote": "назначается на должность",
+              "move_item_to_storage": "убирает предметы на склад",
+              "teardown_ladder": "убирает лестницу",
+              "drop_item_near_workshop": "освобождает верстак",
+              "fabricate_structure": "строит",
+              "teardown_structure": "сносит здание",
+              "feed_pasture_animals": "кормит животных"
+          }
+      }
+  },
 	"ui": {
 		"game": {
 			"game_speed": {
-				"pause_title": "Pause",
-				"pause_description": "Pause the game",
-				"play_title": "Play",
-				"play_description": "Run the game at normal speed",
-				"ff_title": "Fast Forward",
-				"ff_description": "Run the game at 2x speed",
-				"speedThree_title": "Super Speed",
-				"speedThree_description": "Run the game at high speed",
-				"pause_overlay": "Paused"
+				"pause_title": "Пауза",
+				"pause_description": "Поставить игру на паузу",
+				"play_title": "Играть",
+				"play_description": "Запустить игру на нормальный скорости",
+				"ff_title": "Скорость х2",
+				"ff_description": "Запустить игру на большой скорости",
+				"speedThree_title": "Скорость х3",
+				"speedThree_description": "Запустить игру на максимальной скорости",
+				"pause_overlay": "Пауза"
 			},
 			"visions": {
-				"building_vision": "Building vision",
-				"building_vision_description": "Changes the visibility of walls, allowing you to see inside buildings.",
-				"terrain_slice_vision": "Terrain slice vision",
-				"terrain_slice_vision_icon_name": "slice",
-				"terrain_slice_vision_description": "Slice the terrain, allowing you to see underground structures. Change the elevation to see different slices.",
-				"terrain_xray_vision_icon_name": "x-ray",
-				"terrain_xray_vision": "Terrain x-ray vision",
-				"terrain_xray_vision_description": "See through the terrain. Change between full and flat view to show underground walls."
+				"building_vision": "Обзор зданий",
+				"building_vision_description": "Изменяет видимость стен, позволяя видеть всё внутри зданий.",
+				"terrain_slice_vision": "Обзор срезанной поверхности",
+				"terrain_slice_vision_icon_name": "Срез",
+				"terrain_slice_vision_description": "Срезает поверхность, позволяя видеть подземные строения. Меняйте высоту, чтобы видеть разные уровни.",
+				"terrain_xray_vision_icon_name": "Насквозь",
+				"terrain_xray_vision": "Сквозной обзор",
+				"terrain_xray_vision_description": "Смотрите сквозь землю. Переключайтесь между полным и плоским видом, чтобы видеть подземные стены."
 			},
 			"promotion_tree": {
-				"title": "Choose a Job",
-				"promotion_title": "Promotion to [str(job_name)]",
-				"text_1": "In honor of steadfast efforts and resilience, we hereby advance",
-				"choose": "choose a hearthling...",
-				"text_2": "this day of, [str(date)]",
-				"approve": "APPROVE",
-				"approved": "APPROVED",
-				"denied": "DENIED! Requirements not met",
-				"stamper_top_text": "CLICK TO",
-				"stamper_bottom_text": "APPROVE",
-				"requires": "Requires"
+				"title": "Выбрать профессию",
+				"promotion_title": "Назначить профессию: [str(job_name)]",
+				"text_1": "В знак благодарности за проявленные усилия и твердость духа, сим продвигаю",
+				"choose": "выбрать жителя...",
+				"text_2": "В этот день, [str(date)]",
+				"approve": "УТВЕРДИТЬ",
+				"approved": "УТВЕРЖДЕНО",
+				"denied": "Отказ! Условия не выполнены",
+				"stamper_top_text": "НАЖМИТЕ ДЛЯ",
+				"stamper_bottom_text": "УТВЕРЖДЕНИЯ",
+				"requires": "Требуется"
 			},
 			"build_workshop": {
-				"title": "Build Workshop",
-				"requirements": "Requirements",
-				"create_stockpile": "Crafter's Stockpile",
-				"create_stockpile_description": "The crafter will store crafted goods in this stockpile.<p>You probably want to place it near the workbench, but hey, it's your decision.",
-				"page1_subtitle2": "Click on the ground to place the workshop",
-				"page2_subtitle2": "Click and drag on the ground to place the stockpile"
+				"title": "Строительство мастерской",
+				"requirements": "Требования",
+				"create_stockpile": "Запасы мастера",
+				"create_stockpile_description": "Мастер будет хранить товары в кладовой.<p>Скорее всего удобнее будет разместить его рядом с верстаком, но решать вам.",
+				"page1_subtitle2": "Нажмите на землю, чтобы разместить мастерскую",
+				"page2_subtitle2": "Перетащите на землю, чтобы разместить кладовую"
 			},
 			"citizen_character_sheet": {
-				"title": "Character Info",
-				"health": "health",
-				"morale": "morale",
-				"experience": "experience",
-				"max_level": "Max Level!!!",
-				"level_text": "Level ",
-				"level_abbreviation": "Lvl",
-				"locked_status": " (Locked)",
-				"apprentice": "Apprentice",
-				"journal": "Journal",
-				"attributes": "Attributes",
-				"equipment": "Equipment",
-				"abilities": "Job Abilities",
+				"title": "Информация о жителе",
+				"health": "Здоровье",
+				"morale": "Настроение",
+				"experience": "Опыт",
+				"max_level": "Максимальный уровень!!!",
+				"level_text": "Уровень ",
+				"level_abbreviation": "Ур.",
+				"locked_status": " (Заблокирован)",
+				"apprentice": "Подмастерье",
+				"journal": "Журнал",
+				"attributes": "Параметры",
+				"equipment": "Снаряжение",
+				"abilities": "Снаряжение",
 				"morale_title": "Настроение",
-				"overall_morale": "Overall Morale",
-				"morale_food": "Food",
-				"morale_shelter": "Shelter",
-				"morale_safety": "Safety",
-				"attack_abbreviation": "Atk",
-				"defense_abbreviation": "Def",
-				"backpack_tab_name": "Backpack",
-				"journal_no_entries": "no entries",
-				"retired": "Retired at:"
+				"overall_morale": "Общее настроение",
+				"morale_food": "Сытость",
+				"morale_shelter": "Кров",
+				"morale_safety": "Безопасность",
+				"attack_abbreviation": "Атака",
+				"defense_abbreviation": "Защита",
+				"backpack_tab_name": "Рюкзак",
+				"journal_no_entries": "Нет записей",
+				"retired": "В отставке:"
 			},
 			"pet_character_sheet": {
-				"title": "Pet Info",
+				"title": "Домашние животные",
 				"release_pet_confirm_dialog": {
-					"title": "Release Pet",
-					"message": "Are you sure you want to release this pet back into the wild? You won't be able to get it back.",
-					"accept": "I don't want this pet.",
-					"cancel": "Wait!"
+					"title": "Отпустить домашнее животное",
+					"message": "Вы уверены что хотите отпустить домашнее животное на волю? Вы не сможете его вернуть обратно.",
+					"accept": "Да, я хочу отпустить это животное.",
+					"cancel": "Постой!"
 				},
-				"befriended_pet_description": "Befriended by [name(self.stonehearth:pet.owner)]"
+				"befriended_pet_description": "Подружился с: [name(self.stonehearth:pet.owner)]"
 			},
 			"tutorials": {
 				"camera": {
-					"camera_pan_title": "To move the camera",
-					"camera_pan_1": "Hold down the space bar, then move the mouse",
-					"camera_pan_2": "Or use the WASD keys",
-					"camera_pan_3": "Or press the mouse wheel and move the mouse",
-					"camera_orbit_title": "To rotate the camera",
-					"camera_orbit_1": "Right click and drag to rotate the camera",
-					"camera_orbit_2": "Q and E work too",
-					"camera_zoom_title": "To zoom in and out",
-					"camera_zoom_1": "Use the mouse scroll wheel",
-					"camera_zoom_2": "Or use the + and - keys"
+					"camera_pan_title": "Чтобы управлять камерой",
+					"camera_pan_1": "Зажмите пробел и двигайте мышкой",
+					"camera_pan_2": "Или используйте клавиши WASD",
+					"camera_pan_3": "Или нажмите колесо мыши и двигайте мышкой",
+					"camera_orbit_title": "Чтобы повернуть камеру",
+					"camera_orbit_1": "Двигайте мышку, зажав правую кнопку",
+					"camera_orbit_2": "Или используйте Q и E",
+					"camera_zoom_title": "Для изменения масштаба",
+					"camera_zoom_1": "Используйте колесо мыши",
+					"camera_zoom_2": "Или нажимайте клавиши + и -"
 				}
 			},
 			"save_view": {
-				"title": "Saved Games",
-				"confim_delete_title": "Confirm Delete",
-				"confirm_delete_message": "Do you really want to delete this save game?",
-				"confim_overwrite_title": "Confirm Save Overwrite",
-				"confirm_overwrite_message": "Do you really want to completely, unrevokably overwrite this save game?",
-				"save_autosave": "Automatically save periodically",
-				"auto_save_prefix": "Auto save: ",
-				"save_in_progress": "Saving...",
-				"opt_title": "Help us make Stonehearth better!",
-				"opt_text": "Will you allow us to collect anonymous performance and gameplay data to help us tune future versions of the game?",
-				"opt_in_button": "Yes, I'll help",
-				"opt_out_button": "Nah",
-				"opt_thanks": "Thanks!",
-				"save_delete": "Delete",
-				"save_overwrite": "Overwrite",
-				"save_new": "New Save",
-				"load_game": "Load Game",
-				"game_different_version": "incompatible save version",
-				"delete_incompatible_saves": "Delete Incompatible Saves"
+				"title": "Сохранения",
+				"confim_delete_title": "Подтвердить удаление",
+				"confirm_delete_message": "Вы уверенны, что хотите удалить это сохранение?",
+				"confim_overwrite_title": "Подтверить перезапись",
+				"confirm_overwrite_message": "Вы точно уверены, что хотите полностью и безвозвратно перезаписать это сохранение?",
+				"save_autosave": "Периодическое автосохранение",
+				"auto_save_prefix": "Автосохранение: ",
+				"save_in_progress": "Сохранение...",
+				"opt_title": "Помогите нам сделать Stonehearth лучше!",
+				"opt_text" : "Разрешаете ли вы нам собирать анонимную информацию о вашей игре, чтобы мы могли улучшить будущие версии игры?",
+				"opt_in_button": "Да, я хочу помочь",
+				"opt_out_button": "Нет",
+				"opt_thanks": "Спасибо!",
+				"save_delete": "Удалить",
+				"save_overwrite": "Перезаписать",
+				"save_new": "Новое сохранение",
+				"load_game": "Загрузить игру",
+				"game_different_version": "несовместимая версия сохранения",
+				"delete_incompatible_saves": "Удалить несовместимые сохранения"
 			},
 			"common": {
-				"ok": "OK",
-				"cancel": "Cancel",
-				"yes": "Yes",
-				"no": "No",
-				"accept": "Accept",
-				"decline": "Decline",
-				"next": "Next",
-				"hotkey": "key: ",
-				"remove": "Remove",
-				"input_text_tooltip": "Click to edit"
+				"ok": "ОК",
+				"cancel": "Отмена",
+				"yes": "Да",
+				"no": "Нет",
+				"accept": "Принять",
+				"decline": "Отказать",
+				"next": "Далее",
+				"hotkey": "Клавиша: ",
+				"remove": "Удалить",
+				"input_text_tooltip": "Редактировать"
 			},
 			"party": {
-				"create_party": "Create Party",
-				"edit_party": "Edit",
-				"add_party_member": "Add Member",
-				"disband_party": "Disband",
-				"add_party_member_title": "Manage Roster",
-				"done_adding_members": "Done",
-				"add_party_member_button": "Add",
-				"remove_party_member_button": "Remove",
-				"not_in_party": "Not in a party",
-				"party_help": "Party members will travel together and can be directed on the battlefield.",
-				"party_editor_help": "Use this screen to add and remove hearthlings to the party.",
-				"attack_banner_button": "Attack Order",
-				"attack_banner_button_help": "Tell the party to assault a location",
-				"defend_banner_button": "Rally & Defend Order",
-				"defend_banner_button_help": "Tell the party to rally to a location when Town Defense Mode is activated",
-				"default_name": "Party No.[str(party.ord)]"
+				"create_party": "Создать группу",
+				"edit_party": "Редактировать",
+				"add_party_member": "Добавить участника",
+				"disband_party": "Распустить группу",
+				"add_party_member_title": "Управление списком",
+				"done_adding_members": "Готово",
+				"add_party_member_button": "Добавить",
+				"remove_party_member_button": "Удалить",
+				"not_in_party": "Не в группе",
+				"party_help": "Участники группы путешествуют вместе и могут быть распределены на поле боя.",
+				"party_editor_help": "Используй это меню, чтобы добавлять и убирать поселенцев из группы.",
+				"attack_banner_button": "Порядок атаки",
+				"attack_banner_button_help": "Укажи группе позицию в битве",
+				"defend_banner_button": "Порядок сбора и защиты",
+				"defend_banner_button_help": "Укажи группе точку сбора, когда активируется Режим Защиты Города",
+				"default_name": "Группа No.[str(party.ord)]"
 			},
 			"unit_frame": {
 				"show_character_sheet": "Show character sheet",
@@ -159,249 +208,249 @@
 			},
 			"calendar": {
 				"months": {
-					"1": "Bittermun",
-					"2": "Deepmun",
-					"3": "Dewmun",
-					"4": "Rainmun",
-					"5": "Growmun",
-					"6": "Goldmun",
-					"7": "Feastmun",
-					"8": "Warmun",
-					"9": "Newmun",
-					"10": "Azuremun",
-					"11": "Hearthmun",
-					"12": "Northmun"
+					"1": "Жесткомесяц",
+					"2": "Глубокомесяц",
+					"3": "Свежемесяц",
+					"4": "Дождемесяц",
+					"5": "Ростомесяц",
+					"6": "Богатомесяц",
+					"7": "Праздномесяц",
+					"8": "Войномесяц",
+					"9": "Новомесяц",
+					"10": "Небомесяц",
+					"11": "Сердцемесяц",
+					"12": "Северомесяц"
 				},
 				"month_format": "i18n(stonehearth:ui.game.calendar.months.[str(date.month)])",
-				"date_format_long": "Day [str(date.day)] of i18n(stonehearth:ui.game.calendar.month_format), [str(date.year)]",
-				"date_time_long_format": "Day [str(date.day)] of i18n(stonehearth:ui.game.calendar.month_format), [str(date.year)], [str(date.time)]"
+				"date_format_long": "День [str(date.day)], i18n(stonehearth:ui.game.calendar.month_format), [str(date.year)]",
+				"date_time_long_format": "День [str(date.day)], i18n(stonehearth:ui.game.calendar.month_format), [str(date.year)], [str(date.time)]"
 			},
 			"esc_menu": {
 				"title": "Stonehearth",
-				"resume": "Resume",
-				"save": "Save or Load Game",
-				"settings": "Settings",
-				"quit_to_menu": "Quit to Main Menu",
-				"exit_game": "Exit Game",
-				"post_bug": "Post a bug",
+				"resume": "Продолжить",
+				"save": "Сохранение и загрузка",
+				"settings": "Настройки",
+				"quit_to_menu": "Выход в главное меню",
+				"exit_game": "Выход из игры",
+				"post_bug": "Сообщить об ошибке",
 				"exit_confirm_dialog": {
-					"title": "Exit Game",
-					"message": "Completely exit the game? Any unsaved changes will be lost.",
-					"yes_button": "Yes",
-					"cancel_button": "Cancel"
+					"title": "Выход из игры",
+					"message": "Выйти на рабочий стол? Все несохраненные изменения будут утеряны.",
+					"yes_button": "Да",
+					"cancel_button": "Отмена"
 				},
 				"return_to_menu_dialog": {
-					"title": "Return to Main Menu",
-					"message": "Quit this game and return to main menu?",
-					"yes_button": "Yes",
-					"cancel_button": "Cancel"
+					"title": "Возврат в главное меню",
+					"message": "Выйти из текущей игры в главное меню?",
+					"yes_button": "Да",
+					"cancel_button": "Отмена"
 				}
 			},
 			"entities": {
 				"custom_name": "[str(self.unit_info.custom_name)]",
-				"unknown_name": "Unknown",
+				"unknown_name": "Что-то неизвестное",
 				"item_categories": {
-					"food": "Food",
-					"resources": "Resources",
-					"furniture": "Furniture",
-					"armor": "Armor",
-					"decoration": "Decoration",
-					"construction": "Construction",
-					"plants": "Plants",
-					"weapons": "Weapons",
-					"tools": "Tools",
-					"wealth": "Wealth",
-					"refined": "Refined",
-					"uncategorized": "Uncategorized",
-					"workshops" : "Workshops",
-					"none": "None"
+					"food": "Еда",
+					"resources": "Ресурсы",
+					"furniture": "Мебель",
+					"armor": "Доспехи",
+					"decoration": "Украшения для дома",
+					"construction": "Строительство",
+					"plants": "Растения",
+					"weapons": "Оружие",
+					"tools": "Инструменты",
+					"wealth": "Сокровища",
+					"refined": "Обработанные металлы",
+					"uncategorized": "Другое",
+					"workshops" : "Мастерские",
+					"none": "Ничего"
 				},
-				"tooltip_combat_base_damage": "Atk:",
-				"tooltip_combat_base_damage_reduction": "Def:",
-				"death_notification": "[name(i18n_data.entity)] has died."
+				"tooltip_combat_base_damage": "Атака:",
+				"tooltip_combat_base_damage_reduction": "Защита:",
+				"death_notification": "[name(i18n_data.entity)] умер!"
 			},
 			"menu": {
 				"town_menu": {
-					"display_name": "Town Info",
-					"description": "General information about your town, how your hearthlings are feeling, and the wealth you've accumulated!"
+					"display_name": "Город город",
+					"description": "Основная информация о твоем городе, о самочувствии ваших жителей и о накопленных вами богатствах!"
 				},
 				"citizen_manager": {
-					"display_name": "Citizens",
-					"description": "Manage your hearthlings and promote them to new jobs."
+					"display_name": "Жители",
+					"description": "Управляйте вашими поселенцами и назначайте им новые должности."
 				},
 				"harvest_menu": {
-					"display_name": "Harvest",
-					"description": "Harvest resources or mine into the earth.",
+					"display_name": "Сбор",
+					"description": "Собирайте ресурсы или копайте шахты в земле.",
 					"items": {
 						"harvest": {
-							"display_name": "Gather",
-							"description": "Gather trees, plants, and stones from the surface of the land",
-							"tip_title": "Click and drag to harvest resources",
-							"tip_description": "Right click to exit this mode"
+							"display_name": "Сбор",
+							"description": "Собирайте деревья, растения и камни, которые вы видите на земле",
+							"tip_title": "Щелкните и выделите, чтобы собирать ресурсы",
+							"tip_description": "Для выхода из режима нажмите правую кнопку"
 						},
 						"mining_ui": {
-							"display_name": "Mine Tunnel",
-							"description": "Mine out tunnels and caves",
-							"tip_title": "Click and drag to dig downward",
-							"tip_description": "Right click to exit"
+							"display_name": "Копать туннель",
+							"description": "Выкапывайте туннели и пещеры",
+							"tip_title": "Щелкните и выделите, чтобы выкопать землю",
+							"tip_description": "Для выхода из режима нажмите правую кнопку"
 						},
 						"mine_block": {
-							"display_name": "Mine Block",
-							"description": "Mine individual blocks",
-							"tip_title": "Click and drag to dig downward",
-							"tip_description": "Right click to exit"
+							"display_name": "Выкопать блок",
+							"description": "Выкопать отдельный блок",
+							"tip_title": "Щелкните и выделите, чтобы выкопать этот слой",
+							"tip_description": "Для выхода из режима нажмите правую кнопку"
 						},
 						"cancel_task": {
-							"display_name": "Cancel Task",
-							"description": "Cancel tasks on this object",
-							"tip_title": "Click and drag to remove various commands",
-							"tip_description": "Right click to exit this mode"
+							"display_name": "Отменить задание",
+							"description": "Отменить задания на объекте",
+							"tip_title": "Щелкните и выделите, чтобы отменить задания",
+							"tip_description": "Для выхода из режима нажмите правую кнопку"
 						},
 						"clear_item": {
-							"display_name": "Clear",
-							"description": "Clear items out of the world",
-							"tip_title": "Click and drag to permanently clear items from the world",
-							"tip_description": "Right click to exit this mode",
-							"confirm_title": "Are you really sure you want to clear these items?",
-							"confirm_message": "Usable items in the area will be permanently destroyed",
-							"confirm_clear": "Yes, destroy!",
-							"confirm_clear_no": "No! I need that stuff!"
+							"display_name": "Уничтожить",
+							"description": "Окончательно уничтожить объект",
+							"tip_title": "Щелкните и выделите, чтобы окончательно уничтожить объекты",
+							"tip_description": "Для выхода из режима нажмите правую кнопку",
+							"confirm_title": "Вы точно уверенны, что хотите безвозвратно уничтожить эти объекты?",
+							"confirm_message": "Используемые предметы будут полностью уничтожены",
+							"confirm_clear": "Да, разрушить!",
+							"confirm_clear_no": "Нет! Мне это еще нужно!"
 						}
 					}
 				},
 				"zone_menu": {
-					"display_name": "Designate Zones",
-					"description": "Designate areas of the ground for storage, farming, etc.",
+					"display_name": "Территории",
+					"description": "назначение территорий для склада, ферм и прочего",
 					"items": {
 						"create_stockpile": {
-							"display_name": "Stockpile",
-							"description": "Place a stockpile for storing resources.",
-							"tip_title": "Click and drag to create your stockpile",
-							"tip_description": "Right click to exit this mode"
+							"display_name": "Склад",
+							"description": "Расположите склад для хранения ресурсов.",
+							"tip_title": "Щелкните и выделите, чтобы разместить склад",
+							"tip_description": "Для выхода из режима нажмите правую кнопку"
 						},
 						"create_farm": {
-							"display_name": "Farm",
-							"description": "Place a farm on the terrain.",
-							"required_job_text": "Requires a farmer",
-							"tip_title": "Click and drag to designate a new field",
-							"tip_description": "Farmers will break ground and plant crops here"
+							"display_name": "Ферма",
+							"description": "Назначьте территорию для фермы.",
+							"required_job_text": "Требуется фермер",
+							"tip_title": "Щелкните и выделите, чтобы разместить ферму",
+							"tip_description": "Фермеры обработают землю и посадят здесь растения"
 						},
 						"create_trapping_grounds": {
-							"display_name": "Trapping Ground",
-							"description": "Place traps to capture small critters.",
-							"required_job_text": "Requires a trapper",
-							"tip_title": "Click and drag to create trapping grounds",
-							"tip_description": "Trappers catch critters for food and resources in this zone"
+							"display_name": "Разместите ловушки",
+							"description": "Разместите ловушки для ловли небольших животных.",
+							"required_job_text": "Требуется охотник",
+							"tip_title": "Щелкните и выделите, чтобы разместить ловушки",
+							"tip_description": "В этой зоне охотники будут ловить животных для еды и ресурсов"
 						},
 						"create_pasture": {
-							"display_name": "Animal Pasture",
-							"description": "The shepherd will bring animals here to graze.",
-							"required_job_text": "Requires a shepherd",
-							"tip_title": "Click and drag to create an animal pasture",
-							"tip_description": "Shepherds bring animals to this region and tend to their needs here."
+							"display_name": "Пастбище для домашних животных",
+							"description": "Пастух будет приводить сюда животных, чтобы они паслись.",
+							"required_job_text": "Требуется пастух",
+							"tip_title": "Щелкните и выделите, чтобы разместить пастбище",
+							"tip_description": "Пастух приведет сюда животных и будет за ними присматривать."
 						}
 					}
 				},
 				"build_menu": {
-					"display_name": "Build & Design",
-					"description": "Build structures like houses and city walls.",
+					"display_name": "Строительство",
+					"description": "Постройте дома и стены в вашем городе.",
 					"items": {
 						"building_templates": {
-							"display_name": "Place Building",
-							"description": "Choose to construct a building from a pre-designed template"
+							"display_name": "Построить здание",
+							"description": "Выбрать постройку из уже созданного плана"
 						},
 						"custom_building": {
-							"display_name": "Design Building",
-							"description": "Design your own one-of-a-kind building"
+							"display_name": "Спроектировать здание",
+							"description": "Спроектируй свое собственное уникальное здание"
 						},
 						"place_item": {
-							"display_name": "Place Item",
-							"description": "Place items like furniture and decoration",
-							"tip_title": "Click to place this item",
-							"tip_description": "Rotate with , and . keys"
+							"display_name": "Разместить предметы",
+							"description": "Установить мебель и украшения для дома",
+							"tip_title": "Нажмите, чтобы разместить предмет",
+							"tip_description": "Поверните предмет клавишами < и >"
 						},
 						"build_ladder": {
-							"display_name": "Construct Ladder",
-							"description": "Build a ladder to access hard to reach places",
-							"tip_title": "Click on a wall to build ladders",
-							"tip_description": "Click to manually place a ladder to access hard to reach areas.<br><br>Right click to exit"
+							"display_name": "Поставить лестницу",
+							"description": "Поставить лестницу до труднодоступных мест",
+							"tip_title": "Нажмите на стену, чтобы установить лестницу",
+							"tip_description": "Нажмите чтобы установить лестницу, чтобы получить доступ к труднодоступным местам.<br><br>Для выхода из режима нажмите правую кнопку"
 						}
 					}
 				},
 				"fight_menu": {
-					"display_name": "Fight & Defend",
-					"description": "Manage your combat forces",
+					"display_name": "Атака и Защита",
+					"description": "Управляйте своими боевыми силами",
 					"items": {
 						"party_manager": {
-							"display_name": "Parties",
-							"description": "Organize your troops into groups"
+							"display_name": "Отряды",
+							"description": "Распределите ваши войска в отдельные отряды"
 						},
 						"town_defense": {
-							"display_name": "Town Defense Mode!",
-							"description": "Rally your hearthlings to defend the town!",
-							"activated_title": "Town Defense Mode Activated!",
-							"activated_text": "Your workers have stopped their jobs and are vigilantly watching for intruduers."
+							"display_name": "Режим Защиты Города!",
+							"description": "Соберите ваших поселенцев для защиты города!",
+							"activated_title": "Режим Защиты Города Активирован!",
+							"activated_text": "Ваши работники прекратили работать и бдительно ждут наступления врагов."
 						},
 						"loot_item": {
-							"display_name": "Loot",
-							"description": "Steal items from another player.",
-							"tip_title": "Click and drag to loot items from the world",
-							"tip_description": "Right click to exit this mode"
+							"display_name": "Трофеи",
+							"description": "Сбор трофеев и кража предметов у другого игрока.",
+							"tip_title": "Нажмите и выделите, чтобы собрать трофеи и прочие предметы",
+							"tip_description": "Для выхода из режима нажмите правую кнопку"
 						}
 					}
 				},
 				"bulletin_manager": {
-					"display_name": "Bulletins",
-					"description": "Important notifications about the world and your town"
+					"display_name": "Сводка",
+					"description": "Важные уведомления о мире и вашем городе"
 				},
 				"tasks_manager": {
-					"display_name": "Manage Tasks",
-					"description": "Do task stuff.",
-					"remove_stockpile": "Remove Stockpile",
-					"pause_stockpile": "Pause",
-					"resume_stockpile": "Resume",
+					"display_name": "Управление задачами",
+					"description": "Выполнение задач.",
+					"remove_stockpile": "Убрать Stockpile",
+					"pause_stockpile": "Пауза Stockpile",
+					"resume_stockpile": "Продолжить Stockpile",
 					"group": {
-						"stockpiles": "Stockpiles",
-						"building": "Building",
-						"placement": "Placed Items",
-						"maintenance": "General Maintenance",
-						"farming": "Farming",
-						"harvesting": "Harvesting",
-						"mining": "Mining",
-						"trapping": "Trapping"
+						"stockpiles": "Запасы",
+						"building": "Строительство",
+						"placement": "Размещение предметов",
+						"maintenance": "Общее обслуживание",
+						"farming": "Фермерство",
+						"harvesting": "Сбор",
+						"mining": "Добыча руды",
+						"trapping": "Охота"
 					},
-					"percent_full": "[str(percent)] Percent Full",
-					"active": "active",
-					"paused": "paused"
+					"percent_full": "Выполнено процентов: [str(percent)]",
+					"active": "Активно",
+					"paused": "Приостановлено"
 				}
 			},
 			"bulletin": {
-				"bulletin_list_title": "Notifications",
+				"bulletin_list_title": "Уведомления",
 				"shop": {
-					"buy_1": "Buy 1",
-					"buy_10": "Buy 10",
-					"sell_1": "Sell 1",
-					"sell_10": "Sell 10",
-					"buy_tab": "Buy",
-					"sell_tab": "Sell",
-					"not_enough_gold_tooltip": "Not enough gold"
+					"buy_1": "Купить 1",
+					"buy_10": "Купить 10",
+					"sell_1": "Продать 1",
+					"sell_10": "Продать 10",
+					"buy_tab": "Купить",
+					"sell_tab": "Продать",
+					"not_enough_gold_tooltip": "Недостаточно золота"
 				},
 				"quest_bulletin": {
-					"title": "New Message"
+					"title": "Новое сообщение"
 				},
 				"level_up_bulletin": {
-					"title": "[name(i18n_data.entity)] has Leveled Up!",
-					"show_char_sheet": "Character Sheet"
+					"title": "[name(i18n_data.entity)] достиг(ла) нового уровня!",
+					"show_char_sheet": "Показатели поселенца"
 				},
 				"immigration_report": {
-					"title": "Daily Update",
-					"immigration_report_title": "Immigration Report",
-					"population_label": "population",
-					"next_requirements_label": "Next hearthling requirements..."
+					"title": "Наступил новый день!",
+					"immigration_report_title": "Отчет о населении",
+					"population_label": "Население",
+					"next_requirements_label": "Требования для нового жителя..."
 				},
 				"collection_quest": {
-					"pay": "Here you go!",
-					"cancel": "I've changed my mind"
+					"pay": "Готово!",
+					"cancel": "Я передумал"
 				}
 			},
 			"build_mode": {
@@ -4493,7 +4542,7 @@
 		},
 		"blacksmith": {
 			"blacksmith_description": {
-				"display_name": "Blacksmith",
+				"display_name": "Кузнец",
 				"description": "The Blacksmith refines raw ore into metal bars, then uses those bars to craft weapons, armor, and building parts like gates.",
 				"requirements": "Blacksmith's Hammer, crafted by the Mason",
 				"workshop": {
@@ -4674,7 +4723,7 @@
 		},
 		"carpenter": {
 			"carpenter_description": {
-				"display_name": "Carpenter",
+				"display_name": "Плотник",
 				"description": "The carpenter crafts tools and furniture from wood. The tools he makes unlocks several other jobs.",
 				"requirements": "Carpenter's saw, crafted by the Blacksmith.",
 				"workshop": {
@@ -4931,7 +4980,7 @@
 		},
 		"cook": {
 			"cook_description": {
-				"display_name": "Cook",
+				"display_name": "Повар",
 				"description": "The cook makes delicious, hearty meals from base vegetables and meats.",
 				"requirements": "2 levels of Farmer and a Stoneware Spoon, crafted by the Mason.",
 				"workshop": {
@@ -5079,7 +5128,7 @@
 		},
 		"farmer": {
 			"farmer_description": {
-				"display_name": "Farmer",
+				"display_name": "Фермер",
 				"description": "Farmers till fields and harvest crops, providing a consistent food supply and raw materials for baked goods.",
 				"requirements": "Farmer's Hoe, crafted by the Carpenter.",
 				"level_6_data": {
@@ -5127,7 +5176,7 @@
 		},
 		"footman": {
 			"footman_description": {
-				"display_name": "Footman",
+				"display_name": "Боец",
 				"description": "The Footman is a melee fighter. A good choice for the backbone of your town's defense.",
 				"requirements": "Wooden Practice Sword, crafted by the Carpenter.",
 				"level_4_data": {
@@ -5174,7 +5223,7 @@
 		},
 		"mason": {
 			"mason_description": {
-				"display_name": "Mason",
+				"display_name": "Каменщик",
 				"description": "The Mason crafts building materials and decorative items from stone.",
 				"requirements": "Mason's Mallet and Chisel, crafted by the carpenter.",
 				"workshop": {
@@ -5335,7 +5384,7 @@
 		},
 		"shepherd": {
 			"shepherd_description": {
-				"display_name": "Shepherd",
+				"display_name": "Пастух",
 				"description": "Domesticates wild animals and harvests them for food and materials.",
 				"requirements": "2 levels of Trapper and a Shepherd's Crook, crafted by the Carpenter.",
 				"level_4_data": {
@@ -5381,7 +5430,7 @@
 		},
 		"trapper": {
 			"trapper_description": {
-				"display_name": "Trapper",
+				"display_name": "Охотник",
 				"description": "The Trapper's snares capture and (ahem) &quot;harvest&quot; small critters for a reliable source of food and supplies.",
 				"requirements": "Trapper's Knife, forged by the Blacksmith",
 				"level_1_data": {
@@ -5466,7 +5515,7 @@
 		},
 		"weaver": {
 			"weaver_description": {
-				"display_name": "Weaver",
+				"display_name": "Ткач",
 				"description": "The Weaver makes thread, fabrics and hangings from fiber and dye.",
 				"requirements": "Weaver's Spindle, crafted by the Carpenter.",
 				"workshop": {
@@ -5634,7 +5683,7 @@
 		},
 		"worker": {
 			"worker_description": {
-				"display_name": "Worker",
+				"display_name": "Рабочий",
 				"description": "Workers perform basic tasks like harvesting resources, hauling stuff around, and constructing buildings.",
 				"requirements": "None, just hard work and guts.",
 				"level_0_data": {
