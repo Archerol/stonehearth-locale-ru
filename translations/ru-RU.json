@@ -9,39 +9,39 @@
             "harvest_crop": "собирает [name(data.target)]",
             "harvest_resource": "собирает [name(data.target)]",
             "harvest_resource_node": "собирает [name(data.target)]",
-            "light_firepit": "разжигает [name(data.target)]",
+            "light_firepit": "разжигает: [name(data.target)]",
             "place_item_on_structure": "ставит [name(data.target)]",
-            "work_at_workshop": "мастерит [str(data.craftable_name)]",
+            "work_at_workshop": "изготавливает [str(data.craftable_name)]",
             "attack_melee_adjacent": "атакует [name(data.target)]",
             "resting_by_fire": "отдыхает у костра",
-            "claiming_animal": "приручает животное",
-            "looking_for_animals": "следит за животными",
+            "claiming_animal": "ловит животное",
+            "looking_for_animals": "в поисках зверей",
             "collect_ingredient": "собирает ингредиенты",
-            "build_workshop": "строит рабочее место",
-            "death": "умирает",
-            "eat": "принимает пищу",
-            "find_stray_animal": "ищет животных",
-            "harvest_field": "вспахивает землю",
-            "idle": "не работает",
+            "build_workshop": "изготавливает верстак",
+            "death": "умираю! о нет!",
+            "eat": "собирает еду",
+            "find_stray_animal": "в поисках заблудившихся животных",
+            "harvest_field": "собирает урожай",
+            "idle": "думает чем бы заняться",
             "patrol": "патрулирует",
             "plant_crop": "сажает семена",
-            "return_animals": "возвращается на пастбище",
-            "combat": "в бою",
-            "cower": "сжался",
+            "return_animals": "возвращает животных на пастбище",
+            "combat": "врывается в битву",
+            "cower": "съежился от страха",
             "flee": "убегает",
-            "panick": "паникует",
-            "mine": "добывает",
+            "panick": "испуган!",
+            "mine": "копает",
             "sleep_in_bed": "спит",
             "sleep_on_ground": "спит на земле",
-            "check_bait_trap": "проверяет ловушки",
-            "set_bait_trap": "устанавливает ловушки",
-            "survey_trapping_grounds": "осматривает зону отлова",
-            "steal_bait": "ворует",
+            "check_bait_trap": "проверяет капкан",
+            "set_bait_trap": "устанавливает капкан",
+            "survey_trapping_grounds": "осматривает капканы",
+            "steal_bait": "крадет приманку",
             "build_ladder": "строит лестницу",
-            "promote": "помогает",
-            "move_item_to_storage": "несёт предмет на склад",
+            "promote": "назначается на должность",
+            "move_item_to_storage": "убирает предметы на склад",
             "teardown_ladder": "убирает лестницу",
-            "drop_item_near_workshop": "чистит мастерскую",
+            "drop_item_near_workshop": "освобождает верстак",
             "fabricate_structure": "строит",
             "teardown_structure": "сносит сооружение",
             "feed_pasture_animals": "кормит животных"
@@ -52,12 +52,12 @@
       "game": {
          "game_speed": {
             "pause_title": "Пауза",
-            "pause_description": "Приостановить игру",
+            "pause_description": "Поставить игру на паузу",
             "play_title": "Играть",
             "play_description": "Запустить игру с нормальной скоростью",
-            "ff_title": "Ускорить игру",
-            "ff_description": "Увеличить скорость игры х2",
-            "speedThree_title": "Супер скорость",
+            "ff_title": "Скорость х2",
+            "ff_description": "Запустить игру на большой скорости",
+            "speedThree_title": "Скорость х3",
             "speedThree_description": "Значительно увеличить скорость игры",
             "pause_overlay": "Приостановлено"
          },
@@ -67,92 +67,94 @@
             "terrain_slice_vision": "Срез поверхности земли",
             "terrain_slice_vision_icon_name": "срезать",
             "terrain_slice_vision_description": "Срезать слой, позволяет видеть подземные сооружения. Изменяйте высоту, чтобы видеть разные уровни.",
-            "terrain_xray_vision_icon_name": "Рентген",
-            "terrain_xray_vision": "Рентгеновское зрение",
-            "terrain_xray_vision_description": "Видеть сквозь землю."
+            "terrain_xray_vision_icon_name": "Насквозь",
+            "terrain_xray_vision": "Сквозной обзор",
+            "terrain_xray_vision_description": "Смотрите сквозь землю. Переключайтесь между полным и плоским видом, чтобы видеть подземные стены.",
+            "terrain_xray_vision_flat": "плоский",
+            "terrain_xray_vision_full": "полный"
          },
          "promotion_tree": {
             "title": "Выбрать профессию",
-            "promotion_title": "Назначить [str(job_name)]",
-            "text_1": "Благодаря нашим непоколебимым усилиям и стойкости, мы достигли успеха",
-            "choose": "выбрать поселенца...",
-            "text_2": "в этот день, [str(date)]",
+            "promotion_title": "Назначить профессию: [str(job_name)]",
+            "text_1": "В знак благодарности за проявленные усилия и твердость духа, сим продвигаю",
+            "choose": "выбрать жителя...",
+            "text_2": "В этот день, [str(date)]",
             "approve": "УТВЕРДИТЬ",
             "approved": "УТВЕРЖДЕНО",
-            "denied": "ОТКАЗАНО! Требования не выполнены",
-            "stamper_top_text": "Нажмите чтобы",
-            "stamper_bottom_text": "УТВЕРДИТЬ",
-            "requires": "Требования"
+            "denied": "ОТКАЗАНО! Условия не выполнены",
+            "stamper_top_text": "НАЖМИТЕ ДЛЯ",
+            "stamper_bottom_text": "УТВЕРЖДЕНИЯ",
+            "requires": "Требуется"
          },
          "build_workshop": {
-            "title": "Построить мастерскую",
+            "title": "Строительство мастерской",
             "requirements": "Требования",
-            "create_stockpile": "Хранилище ремесленника",
-            "create_stockpile_description": "Ремесленник будет складывать созданные предметы в это хранилище.<p>Возможно Вы захотите разместить его рядом с рабочим местом, но, это по Вашему усмотрению.",
-            "page1_subtitle2": "Щелкните на земле, чтобы разместить рабочее место",
-            "page2_subtitle2": "Щелкните на земле и выделите площадь для строительства хранилища"
+            "create_stockpile": "Запасы мастера",
+            "create_stockpile_description": "Мастер будет хранить товары в кладовой.<p>Скорее всего удобнее будет разместить его рядом с верстаком, но решать вам.",
+            "page1_subtitle2": "Нажмите на землю, чтобы разместить мастерскую",
+            "page2_subtitle2": "Перетащите на землю, чтобы разместить кладовую"
          },
          "citizen_character_sheet": {
-            "title": "Информация о персонаже",
-            "health": "здоровье",
-            "morale": "мораль",
-            "experience": "опыт",
+            "title": "Информация о жителе",
+            "health": "Здоровье",
+            "morale": "Настроение",
+            "experience": "Опыт",
             "max_level": "Максимальный уровень!!!",
             "level_text": "Уровень ",
             "level_abbreviation": "Ур",
-            "locked_status": " (Заблокировано)",
+            "locked_status": " (Заблокирован)",
             "apprentice": "Подмастерье",
             "journal": "Журнал",
-            "attributes": "Характеристики",
+            "attributes": "Параметры",
             "equipment": "Снаряжение",
-            "abilities": "Профессиональные навыки",
-            "morale_title": "Мораль",
-            "overall_morale": "Общая мораль",
-            "morale_food": "Еда",
-            "morale_shelter": "Ночлег",
+            "abilities": "Навыки",
+            "morale_title": "Настроение",
+            "overall_morale": "Общее настроение",
+            "morale_food": "Сытость",
+            "morale_shelter": "Кров",
             "morale_safety": "Безопасность",
             "attack_abbreviation": "Атк",
             "defense_abbreviation": "Защ",
             "backpack_tab_name": "Рюкзак",
-            "journal_no_entries": "нет записей",
-            "retired": "Уходит в:"
+            "journal_no_entries": "Нет записей",
+            "retired": "В отставке:"
          },
          "pet_character_sheet": {
-            "title": "Информация о питомце",
+            "title": "Домашние животные",
             "release_pet_confirm_dialog": {
-               "title": "Отпустить питомца",
-               "message": "Вы уверены, что хотите выпустить это животное обратно в дикую природу? Вы не сможете получить его обратно.",
-               "accept": "Да, пусть уходит.",
-               "cancel": "Стойте!"
+               "title": "Отпустить домашнее животное",
+               "message": "Вы уверены что хотите отпустить домашнее животное на волю? Вы не сможете его вернуть обратно.",
+               "accept": "Да, я хочу отпустить это животное.",
+               "cancel": "Постой!"
             },
-            "befriended_pet_description": "Подружился с [name(self.stonehearth:pet.owner)]"
+            "befriended_pet_description": "Подружился с: [name(self.stonehearth:pet.owner)]"
          },
          "tutorials": {
             "camera": {
-               "camera_pan_title": "Для перемещения камеры",
+               "camera_pan_title": "Чтобы управлять камерой",
                "camera_pan_1": "Зажмите пробел и двигайте мышкой",
                "camera_pan_2": "Или используйте клавиши WASD",
                "camera_pan_3": "Или нажмите колесо мыши и двигайте мышкой",
                "camera_orbit_title": "Для вращения камеры",
                "camera_orbit_1": "Зажав правую кнопку, двигайте мышкой",
-               "camera_orbit_2": "Также используйте Q и E",
-               "camera_zoom_title": "Для приближения и отдаления",
+               "camera_orbit_2": "Или используйте Q и E",
+               "camera_zoom_title": "Для изменения масштаба",
                "camera_zoom_1": "Используйте колесо мыши",
                "camera_zoom_2": "Или используйте клавиши + и -"
             }
          },
          "save_view": {
-            "title": "Сохранённые игры",
+            "title": "Сохранения",
             "confim_delete_title": "Подтвердить удаление",
-            "confirm_delete_message": "Вы действительно хотите удалить эту игру?",
+            "confirm_delete_message": "Вы уверенны, что хотите удалить это сохранение?",
             "confim_overwrite_title": "Подтвердить перезапись",
-            "confirm_overwrite_message": "Вы действительно хотите перезаписать эту игру?",
-            "save_autosave": "Автоматическое сохранение",
+            "confirm_overwrite_message": "Вы точно уверены, что хотите полностью и безвозвратно перезаписать это сохранение?",
+            "save_autosave": "Периодическое автосохранение",
             "auto_save_prefix": "Автосохранение: ",
             "save_in_progress": "Сохранение...",
-            "opt_title": "Помогите нам Stonehearth сделать лучше!",
+            "opt_title": "Помогите нам сделать Stonehearth лучше!",
             "opt_text": "Разрешаете ли вы нам, анонимно собирать информацию о вашей игре, чтобы мы могли сделать будущие версии игры лучше?",
-            "opt_in_button": "Да",
+            "opt_in_button": "Да, я хочу помочь",
             "opt_out_button": "Нет",
             "opt_thanks": "Спасибо!",
             "save_delete": "Удалить",
@@ -164,44 +166,44 @@
          },
          "common": {
             "ok": "ОК",
-            "cancel": "Отменить",
+            "cancel": "Отмена",
             "yes": "Да",
             "no": "Нет",
             "accept": "Принять",
-            "decline": "Отменить",
+            "decline": "Отказать",
             "next": "Далее",
             "hotkey": "ГК: ",
             "remove": "Удалить",
-            "input_text_tooltip": "Нажми для редактирования"
+            "input_text_tooltip": "Редактировать"
          },
          "party": {
             "title": "Группы",
             "create_party": "Создать группу",
             "edit_party": "Изменить",
-            "add_party_member": "Добавить члена",
+            "add_party_member": "Добавить участника",
             "disband_party": "Распустить",
-            "add_party_member_title": "Управление реестром",
+            "add_party_member_title": "Управление списком",
             "done_adding_members": "Готово",
             "add_party_member_button": "Добавить",
             "remove_party_member_button": "Удалить",
             "not_in_party": "Не в группе",
-            "party_help": "Участники группы путешествуют вместе и могут быть отправлены на поле боя.",
+            "party_help": "Участники группы путешествуют вместе и могут быть распределены на поле боя.",
             "party_editor_help": "Используй эту функцию, чтобы добавлять и убирать поселенцев из группы.",
-            "attack_banner_button": "Приказать атаковать",
-            "attack_banner_button_help": "Приказать всем атаковать это место",
-            "defend_banner_button": "Приказать защищать",
-            "defend_banner_button_help": "Приказать всем собраться в этом месте, когда включен режим обороны города",
-            "default_name": "Группа Назв.[str(party.ord)]"
+            "attack_banner_button": "Порядок атаки",
+            "attack_banner_button_help": "Укажи группе позицию в битве",
+            "defend_banner_button": "Порядок сбора и защиты",
+            "defend_banner_button_help": "Укажи группе точку сбора, когда активируется Режим Защиты Города",
+            "default_name": "Группа №.[str(party.ord)]"
          },
          "unit_frame": {
-            "show_character_sheet": "Показать страницу персонажа",
+            "show_character_sheet": "Показать страницу жителя",
             "focus_camera": "Показать"
          },
          "citizens": {
             "title": "Жители"
          },
          "create_camp": {
-            "new_game_place_banner": "Щелкните здесь, чтобы разместить знамя города",
+            "new_game_place_banner": "Нажмите здесь, чтобы разместить знамя города",
             "click_banner_tip": "Нажмите на знамя, чтобы установить место для поселения",
             "select_camp_tip": "Теперь установите место для поселения",
             "name_camp_title": "Название поселения",
@@ -209,85 +211,86 @@
          },
          "calendar": {
             "months": {
-               "1": "Горькабрь",
-               "2": "Глубоколь",
-               "3": "Росабрь",
-               "4": "Дождябрь",
-               "5": "Растябрь",
-               "6": "Золотабрь",
-               "7": "Праздникабрь",
-               "8": "Войнабрь",
-               "9": "Новобрь",
-               "10": "Лазурябрь",
-               "11": "Камнябрь",
-               "12": "Холодябрь"
+               "1": "Жесткомесяц",
+               "2": "Глубокомесяц",
+               "3": "Свежемесяц",
+               "4": "Дождемесяц",
+               "5": "Ростомесяц",
+               "6": "Богатомесяц",
+               "7": "Праздномесяц",
+               "8": "Войномесяц",
+               "9": "Новомесяц",
+               "10": "Небомесяц",
+               "11": "Сердцемесяц",
+               "12": "Северомесяц"
             },
             "month_format": "i18n(stonehearth:ui.game.calendar.months.[str(date.month)])",
             "date_format_long": "День [str(date.day)] от i18n(stonehearth:ui.game.calendar.month_format), [str(date.year)]",
-            "date_time_long_format": "День [str(date.day)] от i18n(stonehearth:ui.game.calendar.month_format), [str(date.year)], [str(date.time)]"
+            "date_time_long_format": "День [str(date.day)], i18n(stonehearth:ui.game.calendar.month_format), [str(date.year)], [str(date.time)]"
          },
          "esc_menu": {
             "title": "Stonehearth",
-            "resume": "Возобновить",
-            "save": "Сохранить или загрузить игру",
+            "resume": "Продолжить",
+            "save": "Сохранение и загрузка",
             "settings": "Настройки",
-            "quit_to_menu": "Выйти в главное меню",
+            "quit_to_menu": "Выход в главное меню",
             "exit_game": "Выход из игры",
-            "post_bug": "Сообщить о ошибке",
+            "post_bug": "Сообщить об ошибке",
             "exit_confirm_dialog": {
                "title": "Выход из игры",
-               "message": "Выйти из игры? Все несохранённые данные будут утеряны.",
+               "message": "Выйти на рабочий стол? Все несохраненные изменения будут утеряны.",
                "yes_button": "Да",
                "cancel_button": "Отмена"
             },
             "return_to_menu_dialog": {
-               "title": "Выйти в главное меню",
-               "message": "Покинуть игру и выйти в главное меню?",
+               "title": "Возврат в главное меню",
+               "message": "Выйти из текущей игры в главное меню?",
                "yes_button": "Да",
                "cancel_button": "Отмена"
             }
          },
          "entities": {
             "custom_name": "[str(self.unit_info.custom_name)]",
-            "unknown_name": "Неизвестно",
+            "unknown_name": "Что-то неизвестное",
             "item_categories": {
                "food": "Еда",
                "resources": "Ресурсы",
                "furniture": "Мебель",
-               "armor": "Броня",
+               "armor": "Доспехи",
                "decoration": "Украшения",
                "construction": "Конструкции",
                "plants": "Растения",
                "weapons": "Оружие",
                "tools": "Инструменты",
                "wealth": "Сокровища",
-               "refined": "Изысканные",
-               "uncategorized": "Без категории",
-               "workshops" : "Рабочие места",
+               "refined": "Обработанные металлы",
+               "uncategorized": "Другое",
+               "workshops" : "Мастерские",
                "none": "Ничего"
             },
             "tooltip_combat_base_damage": "Атк:",
             "tooltip_combat_base_damage_reduction": "Защ:",
-            "death_notification": "[name(i18n_data.entity)] умер."
+            "tooltip_num_undeployed": "Не изпользуемый: [str(num_undeployed)]",
+            "death_notification": "[name(i18n_data.entity)] умер!"
          },
          "menu": {
             "town_menu": {
                "display_name": "Информация о городе",
-               "description": "Общие сведения о городе, как ваши жители себя чувствуют, общий капитал, который вы накопили!"
+               "description": "Основная информация о твоем городе, о самочувствии ваших жителей и о накопленных вами богатствах!"
             },
             "citizen_manager": {
                "display_name": "Жители",
-               "description": "Управление поселенцами, продвижение их на новые рабочие месте."
+               "description": "Управляйте вашими поселенцами и назначайте им новые должности."
             },
             "harvest_menu": {
-               "display_name": "Сбор ресурсов",
-               "description": "Собрать ресурсы или пробить шахту.",
+               "display_name": "Сбор",
+               "description": "Собирайте ресурсы или копайте шахты в земле.",
                "items": {
                   "harvest": {
-                     "display_name": "Рубка",
-                     "description": "Нарубить дров или собрать растения и камни с поверхности земли",
-                     "tip_title": "Нажмите и перетащите, чтобы собрать ресурсы",
-                     "tip_description": "Нажмите правой кнопкой, чтобы выйти из этого режима"
+                     "display_name": "Сбор",
+                     "description": "Собирайте деревья, растения и камни, которые вы видите на земле",
+                     "tip_title": "Нажмите и выделите, чтобы собрать ресурсы",
+                     "tip_description": "Для выхода из режима нажмите правую кнопку"
                   },
                   "mining_ui": {
                      "display_name": "Пробить шахту",
@@ -296,85 +299,85 @@
                      "tip_description": "Нажмите правой кнопкой, чтобы выйти из этого режима"
                   },
                   "mine_block": {
-                     "display_name": "Разбить блок",
-                     "description": "Разбить отдельный блок",
-                     "tip_title": "Нажмите и перетащить, чтобы копать вниз",
-                     "tip_description": "Нажмите правой кнопкой, чтобы выйти из этого режима"
+                     "display_name": "Выкопать блок",
+                     "description": "Выкопать отдельный блок",
+                     "tip_title": "Нажмите и выделите, чтобы выкопать этот слой",
+                     "tip_description": "Для выхода из режима нажмите правую кнопку"
                   },
                   "cancel_task": {
                      "display_name": "Отменить задачу",
-                     "description": "Отменить задачу на этом объекте",
-                     "tip_title": "Нажмите и перетащите, чтобы удалить различные задачи",
-                     "tip_description": "Нажмите правой кнопкой, чтобы выйти из этого режима"
+                     "description": "Отменить задачу на объекте",
+                     "tip_title": "Нажмите и выделите, чтобы отменить задания",
+                     "tip_description": "Для выхода из режима нажмите правую кнопку"
                   },
                   "clear_item": {
-                     "display_name": "Очистить",
-                     "description": "Удалить элемент из мира",
-                     "tip_title": "Нажмите и перетащите, чтобы навсегда удалить элемент из мира",
-                     "tip_description": "Нажмите правой кнопкой, чтобы выйти из этого режима",
-                     "confirm_title": "Вы действительно хотите удалить эти элементы?",
-                     "confirm_message": "Используемые предметы в области будут уничтожены",
-                     "confirm_clear": "Да, уничтожить!",
-                     "confirm_clear_no": "Нет! Это мне нужно!"
+                     "display_name": "Уничтожить",
+                     "description": "Окончательно уничтожить объект",
+                     "tip_title": "Нажмите и выделите, чтобы окончательно уничтожить объекты",
+                     "tip_description": "Для выхода из режима нажмите правую кнопку",
+                     "confirm_title": "Вы точно уверенны, что хотите безвозвратно уничтожить эти объекты?",
+                     "confirm_message": "Используемые предметы будут уничтожены",
+                     "confirm_clear": "Да, разрушить!",
+                     "confirm_clear_no": "Нет! Мне это еще нужно!"
                   }
                }
             },
             "zone_menu": {
-               "display_name": "Разместить зону",
-               "description": "Разместить участок земли для: хранения, полей и так далее.",
+               "display_name": "Территории",
+               "description": "Разместить участок земли для склада, ферм и прочего",
                "items": {
                   "create_stockpile": {
                      "display_name": "Склад",
-                     "description": "Установить место для хранения ресурсов.",
-                     "tip_title": "Нажмите и перетащите, чтобы создать склад",
-                     "tip_description": "Нажмите правой кнопкой, чтобы выйти из этого режима"
+                     "description": "Расположите склад для хранения ресурсов.",
+                     "tip_title": "Нажмите и выделите, чтобы разместить склад",
+                     "tip_description": "Для выхода из режима нажмите правую кнопку"
                   },
                   "create_farm": {
                      "display_name": "Поля",
-                     "description": "Установить место для полей.",
+                     "description": "Расположите территорию для фермы.",
                      "required_job_text": "Требуется фермер",
-                     "tip_title": "Нажмите и перетащите, чтобы создать поле",
-                     "tip_description": "Фермеры будут вспахивать землю и сажать культуры"
+                     "tip_title": "Нажмите и выделите, чтобы разместить ферму",
+                     "tip_description": "Фермеры обработают землю и посадят здесь растения"
                   },
                   "create_trapping_grounds": {
-                     "display_name": "Место отлова",
-                     "description": "Установите ловушки, чтобы ловить зверей.",
+                     "display_name": "Разместите ловушки",
+                     "description": "Разместите ловушки для ловли небольших животных.",
                      "required_job_text": "Требуется зверолов",
-                     "tip_title": "Нажмите и перетащите, чтобы создать место отлова",
-                     "tip_description": "Звероловы будут ловить здесь животных, для еды и ресурсов"
+                     "tip_title": "Щелкните и выделите, чтобы разместить ловушки",
+                     "tip_description": "В этой зоне, звероловы будут ловить животных для еды и ресурсов"
                   },
                   "create_pasture": {
-                     "display_name": "Пастбище животных",
-                     "description": "Пастух приведёт сюда животных и здесь они будут пастись.",
+                     "display_name": "Пастбище для домашних животных",
+                     "description": "Пастух будет приводить сюда животных, чтобы они паслись.",
                      "required_job_text": "Требуется пастух",
-                     "tip_title": "Нажмите и перетащите, чтобы создать пастбище",
+                     "tip_title": "Нажмите и выделите, чтобы разместить пастбище",
                      "tip_description": "Пастухи приведут сюда животных и будут за ними ухаживать, чтобы собирать шерсть."
                   }
                }
             },
             "build_menu": {
-               "display_name": "Стройка и проектирование",
-               "description": "Стройка конструкций и городских стен.",
+               "display_name": "Строительство",
+               "description": "Постройте дома и стены в вашем городе.",
                "items": {
                   "building_templates": {
-                     "display_name": "Место строительства",
-                     "description": "Построить здание из созданных шаблонов"
+                     "display_name": "Построить здание",
+                     "description": "Выбрать постройку из уже созданного плана"
                   },
                   "custom_building": {
                      "display_name": "Спроектировать здание",
                      "description": "Спроектируйте своё здание"
                   },
                   "place_item": {
-                     "display_name": "Установить элемент",
-                     "description": "Поставить предмет: мебель, украшения",
-                     "tip_title": "Нажмите, чтобы поместить",
-                     "tip_description": "Поворачивать с помощью клавиш Б и Ю"
+                     "display_name": "Разместить предметы",
+                     "description": "Установить мебель и украшения для дома",
+                     "tip_title": "Нажмите, чтобы разместить",
+                     "tip_description": "Поверните предмет клавишами < и >"
                   },
                   "build_ladder": {
-                     "display_name": "Построить лестницу",
-                     "description": "Построить лестницу, чтобы залезть повыше",
+                     "display_name": "Поставить лестницу",
+                     "description": "Поставить лестницу до труднодоступных мест",
                      "tip_title": "Нажмите на стену, чтобы установить лестницу",
-                     "tip_description": "Нажмите, чтобы вручную установить лестницу.<br><br>Правая кнопка - выход"
+                     "tip_description": "Нажмите чтобы установить лестницу, чтобы получить доступ к труднодоступным местам.<br><br>Для выхода из режима нажмите правую кнопку"
                   }
                }
             },
@@ -387,16 +390,16 @@
                      "description": "Объедините своих солдат в группы"
                   },
                   "town_defense": {
-                     "display_name": "Режим обороны города!",
-                     "description": "Все ваши поселенцы буду защищать город!",
+                     "display_name": "Режим обороны Города!",
+                     "description": "Соберите ваших поселенцев для защиты города!",
                      "activated_title": "Режим обороны города активирован!",
-                     "activated_text": "Ваши работники бросили свою работу и зорко наблюдают за захватчиками."
+                     "activated_text": "Ваши работники прекратили работать и бдительно ждут наступления врагов."
                   },
                   "loot_item": {
-                     "display_name": "Трофей",
-                     "description": "Украсть предмет у другого игрока.",
-                     "tip_title": "Нажмите и перетащите, чтобы собрать предметы",
-                     "tip_description": "Нажмите правой кнопкой, чтобы выйти из этого режима"
+                     "display_name": "Трофеи",
+                     "description": "Сбор трофеев и кража предметов у другого игрока.",
+                     "tip_title": "Нажмите и выделите, чтобы собрать трофеи и прочие предметы",
+                     "tip_description": "Для выхода из режима нажмите правую кнопку"
                   }
                }
             },
@@ -433,11 +436,11 @@
             },
             "bulletin_manager": {
                "display_name": "Сводка",
-               "description": "Важные сообщения о мире и твоём городе"
+               "description": "Важные уведомления о мире и вашем городе"
             },
             "tasks_manager": {
                "display_name": "Управление задачами",
-               "description": "Сделать вещи.",
+               "description": "Выполнение задач.",
                "remove_stockpile": "Убрать склад",
                "pause_stockpile": "Пауза",
                "resume_stockpile": "Продолжить",
@@ -445,15 +448,15 @@
                   "stockpiles": "Склады",
                   "building": "Здание",
                   "placement": "Разместить",
-                  "maintenance": "Техническое обслуживание",
+                  "maintenance": "Общее обслуживание",
                   "farming": "Земледелие",
                   "harvesting": "Сбор",
-                  "mining": "Добыча",
+                  "mining": "Добыча руды",
                   "trapping": "Отлов"
                },
-               "percent_full": "[str(percent)] процентов",
-               "active": "активный",
-               "paused": "остановленно"
+               "percent_full": "Выполнено процентов: [str(percent)]",
+               "active": "Активно",
+               "paused": "Приостановлено"
             }
          },
          "bulletin": {
@@ -465,23 +468,23 @@
                "sell_10": "Продать 10",
                "buy_tab": "Купить",
                "sell_tab": "Продать",
-               "not_enough_gold_tooltip": "Не хватает золота"
+               "not_enough_gold_tooltip": "Недостаточно золота"
             },
             "quest_bulletin": {
                "title": "Новое сообщение"
             },
             "level_up_bulletin": {
-               "title": "[name(i18n_data.entity)] повысил уровень!",
-               "show_char_sheet": "Страница персонажа"
+               "title": "[name(i18n_data.entity)] достиг(ла) нового уровня!",
+               "show_char_sheet": "Показатели поселенца"
             },
             "immigration_report": {
-               "title": "Ежедневный отчёт",
-               "immigration_report_title": "Иммиграционный отчёт",
-               "population_label": "народонаселение",
-               "next_requirements_label": "Требования для следующего поселенца..."
+               "title": "Наступил новый день!",
+               "immigration_report_title": "Отчет о населении",
+               "population_label": "Население",
+               "next_requirements_label": "Требования для нового жителя..."
             },
             "collection_quest": {
-               "pay": "Here you go!",
+               "pay": "Готово!",
                "cancel": "Я передумал"
             }
          },
@@ -690,8 +693,8 @@
             "workshop_entity_claimed_description": "Принадлежит [name(self.stonehearth:workshop.crafter)]",
             "craft_number_left": "Изготовить",
             "craft_number_right": "сейчас.",
-            "craft_up_to_left": "Maintain",
-            "craft_up_to_right": "в инвентаре.",
+            "craft_up_to_left": "Минимум",
+            "craft_up_to_right": "на складе.",
             "craft_ingredients": "Компоненты:",
             "craft_requirements": "Требования:",
             "unlock_text": "Чтобы разблокировать:",
@@ -918,14 +921,20 @@
             "enable_lua_jit": "Использовать Lua JIT (Требуется перезапуск)",
             "send_anon_data": "Отправить анонимное сообщение, чтобы помочь улучшить Stonehearth!",
             "language_select": "Язык",
-            "enable_speed_3": "Включить 3 скорость (Требуется перезагрузить UI)",
-            "enable_speed_3_note": "Производительность может ухудшиться в большом городе на скорости 3. Используйте на свой страх и риск.",
-            "difficulty": "Сложность",
-            "difficult_description_0": "Нормально",
-            "difficult_description_1": "Средне",
-            "difficult_description_2": "Тяжело",
-            "difficult_description_3": "Экстрим",
-            "default_storage_filter_none": "Фильтр хранения по умолчанию None"
+            "gameplay_tab": {
+               "title": "Игра",
+               "experimental": "Пробный",
+               "experimental_description": "Эти настройки ещё в разработке и могут быть нестабильными! Используйте на свой страх и риск!",
+               "enable_speed_3": "Увеличить скорость игры х3 (Требуется перезагрузка UI)",
+               "enable_speed_3_note": "Примечание: производительность игры может быть замедленна в крупных городах на скорости х3. Будьте осторожны!",
+               "enable_speed_3_description": "Добавляет новый параметр скорости в правом углу панели. На котором, игра будет работать на скорости х4!",
+               "default_storage_filter_none": "Фильтр хранения по умолчанию, ничего",
+               "default_storage_filter_none_description": "При создании нового склада, в качестве фильтра по умолчанию на хранение, будет установлен 'Ничего', а не 'Всё'",
+               "enable_cpp_ai": "Включить CPP Ai",
+               "enable_cpp_ai_description": "Использовать новую систему AI, написанном на C++. Это должно работать быстрее в отличии от старого и обрабатыть большие города лучше.",
+               "enable_subspace_pathfinder": "Включить подпространственные поиск путей",
+               "enable_subspace_pathfinder_description": "Используйте новый поиск путей, который более эффективен и может искать больше путей. Однако может произойти сбой. Пожалуйста, сообщайте о любых проблемах с путями!"
+            }
          },
          "title_screen": {
             "exit": "выход",
@@ -972,7 +981,7 @@
          },
          "error_browser": {
             "title": "Ошибка",
-            "filename_label": "filename",
+            "filename_label": "имя файла",
             "close_permanently_button": "Закрыть",
             "prev_button": "Назад",
             "next_button": "Далее",
@@ -1620,6 +1629,9 @@
                                  "campfire": {
                                     "display_name": "Гипнотизирующий костёр",
                                     "Description": "Но... что делает его зелёным?"
+                                 },
+                                 "workers": {
+                                    "description": "Firekeeper"
                                  }
                               },
                               "goblin_tent": {
@@ -1632,6 +1644,12 @@
                                  "wolf_cage": {
                                     "display_name": "Клетка волков",
                                     "Description": "Собственность Ого Крушителя Черепов"
+                                 },
+                                 "trainer": {
+                                    "description": "Бьёт волков до безумства"
+                                 },
+                                 "tame_wolf": {
+                                    "description": "Ужасно злой"
                                  }
                               }
                            }
@@ -1643,7 +1661,12 @@
                         "create_camp": {
                            "ogo_tent": {
                               "ogo_tent": {
-                                 "display_name": "Шатёр Ого"
+                                 "display_name": "Шатёр Ого",
+                                 "description": "Сделан из обесцвеченных шкур."
+                              },
+                              "ogo": {
+                                 "description": "Предсказатель говорит: Ого избранный, Прерыватель цикла Ого",
+                                 "display_name": "Ого Крушитель Черепов"
                               }
                            },
                            "ogo_throne": {
@@ -1786,6 +1809,9 @@
                                  "campfire": {
                                     "display_name": "Гипнотизирующий костёр",
                                     "Description": "Но... что делает его зелёным?"
+                                 },
+                                 "workers": {
+                                    "description": "Designated hearth-tender"
                                  }
                               }
                            }
@@ -2232,7 +2258,7 @@
                      "005": "Бегите, бегите, там страшные монстры!!!",
                      "006": "Я не думаю, что он хочет дружить!!!"
                   },
-                     "000": "psychopathic_misanthrope",
+                  "psychopathic_misanthrope": {
                      "001": "РААААААРГХ!!", 
                      "002": "НЕЕААААААГХХ!", 
                      "003": "ГАААААААААГХ!!", 
@@ -2861,7 +2887,7 @@
                }
             }
          }
-      
+      }
    },
    "entities": {
       "armor": {
@@ -3055,10 +3081,22 @@
                "description": "Хранилище"
             }
          },
+         "stone_chest": {
+            "stone_chest_ghost": {
+               "display_name": "Каменный сундук",
+               "description": "Хранилище"
+            }
+         },
          "barrel": {
             "barrel_ghost": {
                "display_name": "Обитый кожей сундук",
                "description": "Хранилище"
+            }
+         },
+         "vault": {
+            "vault_ghost": {
+               "display_name": "Хранилище",
+               "description": "Большое хранилище"
             }
          }
       },
@@ -4846,7 +4884,13 @@
                "recipe_name": "Наковальня кузнеца",
                "flavor": "Характер кузнеца определяется, его качественными работами."
             },
-            "workbenches_name": "Верстаки"
+            "workbenches_name": "Верстаки",
+            "storage_name": "Хранилище",
+            "vault_recipe": {
+               "description": "Большое хранилище на 256 предметов!",
+               "recipe_name": "Хранилище",
+               "flavor": "Придумано Арси, пережившим Чата"
+            }
          }
       },
       "carpenter": {
@@ -5453,9 +5497,9 @@
                "flavor": "Для улицы!"
             },
             "stone_chest_recipe": {
-               "description": "Imposing place to put things.",
-               "recipe_name": "Stone Chest",
-               "flavor": "'Listen up, kid. All the chests in Hemgorir-Under-Mountain looked like this.'--Edolf, Wandering Bard"
+               "description": "Установите, чтобы хранить вещи.",
+               "recipe_name": "Каменный сундук",
+               "flavor": "'Слушайте дети. Вся гора усыпана сундуками. Эдольф, Блуждающий бард"
             },
             "stone_garden_lantern_recipe": {
                "description": "Эта лампа создает атмосферу древности.",
