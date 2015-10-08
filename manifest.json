@@ -14,5 +14,10 @@
          "file(ui/root/js/helpers.js)",
          "file(ui/root/js/loadLocales.js)"
       ]
+   },
+   "overrides" : {
+      "stonehearth/services/server/population/data/ascendancy_population.json": "file(population/ascendancy_population.json)",
+      "stonehearth/services/server/population/data/goblin_population.json": "file(population/goblin_population.json)",
+      "stonehearth/services/server/population/data/undead_population.json": "file(population/undead_population.json)"
    }
 }

@@ -3,7 +3,7 @@
       "ru": {
          "display_name": "Русский",
          "path": [
-            "file(translations/ru.json)"
+            "file(translations/ru-RU.json)"
          ]
       }
    }

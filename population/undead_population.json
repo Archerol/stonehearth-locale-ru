@@ -1,0 +1,114 @@
+{
+   "kingdom_name" : "Нежить",
+   "kingdom_id" : "undead",
+   "amenity_to_strangers" : "hostile",
+
+   "roles" : {
+      "skeleton" : {
+         "male" : {
+            "uri" : ["stonehearth:monsters:undead:skeleton"], 
+            "given_names" : [
+               "Бру",
+               "Ёкок",
+               "Краглек",
+               "Лост",
+               "Емпт",
+               "Брок",
+               "Холво",
+               "Деспр",
+               "Деснад",
+               "Тон",
+               "Рен",
+               "Трест",
+               "Гареф",
+               "Лае",
+               "Дих",
+               "Шер",
+               "Бак",
+               "Иан",
+               "Намлесс"
+            ]
+         },
+         "female" : {
+            "uri" : ["stonehearth:monsters:undead:skeleton_female"],
+            "given_names" : [
+               "Кейт",
+               "Эми",
+               "Идра",
+               "Лосс",
+               "Моурн",
+               "Блек",
+               "Несс",
+               "Лене",
+               "Элия",
+               "Есса",
+               "Ели",
+               "Немелесс"
+            ]
+         },
+         "surnames" : [
+            "Костлявый",
+            "Мёртвый",
+            "Забытый",
+            "Скелет",
+            "Человечный",
+            "Мокрый"
+         ]
+      },
+      "zombie" : {
+         "male" : {
+            "uri" : ["stonehearth:monsters:undead:zombie"],
+            "given_names" : [
+               "Малдер",
+               "Эд",
+               "Фронк",
+               "Слем",
+               "Сов",
+               "Денет",
+               "Ловдер",
+               "Род",
+               "Неб",
+               "Ёнор",
+               "Намелесс"
+            ]
+         },
+         "female" : {
+            "uri" : ["stonehearth:monsters:undead:zombie_female"],
+            "given_names" : [
+               "Твини",
+               "Лосси",
+               "Зомби",
+               "Элва",
+               "Лесс",
+               "Сал",
+               "Эм",
+               "Тори",
+               "Намелесс"
+            ]
+         }, 
+         "surnames" : [
+            "Зомби",
+            "Тлеющий",
+            "Замученный",
+            "Червивый",
+            "Мёртвый",
+            "Грустный",
+            "Медленный"
+         ]
+      }
+   },
+   "town_pieces" : {
+      "optional_prefix" : [
+         "Ay"
+      ], 
+      "town_name" : [
+         "Pohk"
+      ], 
+      "suffix" : [
+         "yu"
+      ]
+   }, 
+   "task_groups" : {
+      "stonehearth:task_group:restock" : "stonehearth:simple_labor"
+   }
+}
