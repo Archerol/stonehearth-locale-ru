@@ -1,13 +1,13 @@
 {
    "info" : {
-      "name" : "Russian language mod.", 
-      "version" : 2.1
+      "name" : "Russian translation v14.", 
+      "version" : 2
    },
-   "mixintos" : {
-      "stonehearth/locales/supported_languages.json" : "file(added_languages.json)"
-   },
+
+
    "ui": {
       "less": [
+         "file(ui/root/css/base.less)",
          "file(ui/root/css/variables.less)"
       ],
       "js": [
@@ -15,9 +15,27 @@
          "file(ui/root/js/loadLocales.js)"
       ]
    },
+
+   "mixintos" : {
+      "stonehearth/locales/supported_languages.json" : "file(added_languages.json)",
+
+      "stonehearth/locales/ru.json" : "file(translations/stonehearth/jobs.json)",
+      
+      "stonehearth/locales/ru.json": "file(translations/candledark/candledark.json)"
+   },
+   
    "overrides" : {
-      "stonehearth/services/server/population/data/ascendancy_population.json": "file(population/ascendancy_population.json)",
-      "stonehearth/services/server/population/data/goblin_population.json": "file(population/goblin_population.json)",
-      "stonehearth/services/server/population/data/undead_population.json": "file(population/undead_population.json)"
+      "stonehearth/locales/ru.json": "file(translations/stonehearth/ru-RU.json)",
+      "stonehearth/services/server/population/data/ascendancy_population.json": "file(translations/stonehearth/population/ascendancy_population.json)",
+      "stonehearth/services/server/population/data/goblin_population.json": "file(translations/stonehearth/population/goblin_population.json)",
+      "stonehearth/services/server/population/data/undead_population.json": "file(translations/stonehearth/population/undead_population.json)",
+      
+      "rayyas_children/locales/ru.json": "file(translations/rayyas_children/rayyas_children.json)",
+      "rayyas_children/data/rayyas_children_population.json": "file(translations/rayyas_children/population/rayyas_children_population.json)",
+
+      "frostfeast/locales/ru.json": "file(translations/frostfeast/frostfeast.json)"
+
+      
    }
+
 }

@@ -1,0 +1,736 @@
+{ 
+   "ui": { 
+      "game": { 
+         "common": { 
+            "ilgn": "Я люблю хорошие новости!",
+            "fttoya": "Снежный фестиваль? Что, уже?",            
+            "iiabn": "Немного холодно...",
+            "yes_please": "Да, пожалуйса!",
+            "no_thanks": "Нет, спасибо!",
+            "idlg": "Я люблю подарки!",
+            "sharing": "Поделиться?",
+            "cold": "Мы ещё не начали готовиться!",
+            "aeisk": "Что-то ещё?",
+            "yup": "Угу!", 
+            "great": "Здорово!",
+            "toodles": "До свидания!",
+            "wai": "Мы, на самом деле!",
+            "greetings": "И снова привет!"
+         },
+         "zones_mode": {
+            "pasture": {
+               "pig_pen_name": "Хлев",
+               "pig_pen_description": "Свиньи - являются отличным источником мяса"
+            }
+         }   
+      },
+      "data": {
+         "constants": {
+            "food_resource_name": "Пища"
+         },
+         "gm" : {
+            "campaigns" : {
+               "frostfeast" : {  
+                  "dialog_nodes" : { 
+                     "bulletin_message" : { 
+                  "000" : "Приветствую достопочтенные. И я принёс благую весть!",
+                  "001" : "За дверью - холодина!",
+                  "002" : "Да! Ночь длиннее, а температура ниже. Вы должны сделать, несколько источников тепла и дополнительные источники света!",
+                  "003" : "На самом деле! Как ты уже догадался - это праздник, а в праздники обычно дарят подарки. Если ты немного отвык, то я могу освежить твою память.",
+                  "004" : "Каждый год, когда приходит зима, из всех городов, в церковь несут пожертвования. В обмен на эти дары, они дают подарок.",
+                  "004a" : "В это время, важно не только получать подарки! Но и дарить другим.",
+                  "004b" : "В это время, становится очень темно и холодно. Плохой урожай летом, может привести к голоданию в это время. Не говоря уже о городах, абсолютно не подготовленных.",
+                  "004c" : "Ты никогда не замечал... чем сильнее мёрзнут твои друзья, тем меньше они работают. Очень тяжело работать в снег, да ещё когда и холодно. Очень важно иметь обогреватели, чтобы твои поселенцы могли спасаться от холода.",
+                  "004d" : "Свет! Свет очень важен. Без него плохо видно и ужасно мрачно. Я думаю, что это всё - вы готовы?",
+                  "005" : "Отлично! Ожидаем сестру Дженни в ближайшее время. Она была замечена на границе империи, при себе она имеет список пожертвований.",
+                  "006" : "Выполнив данную задачу и добившись успеха, вы будете вознаграждены. Я не прощаюсь.",
+                  "007" : "Я не мог не заметить, вашим поселенцам немного холодно. Пожалуйста, примите этот скромный подарок.",
+                  "008" : "Привет. Я - сестра Дженна, мне сообщили, что вы ждали меня.",
+                  "009" : "Хорошо, мы не должны задерживаться. Дайте мне минутку собраться с мыслями и я начну.",
+                  "010" : "Привет вам, достопочтенные.",  
+                  "011" : "Боюсь ситуация очень плачевна. Эта зима крайне холодная, чем ожидалось. И нам необходимо больше, чем мы думали. Я скоро приеду с новым списком."                    
+                     },                                                                                           
+               "bulletin_title" : "Церковь",
+               "bulletin_title1" : "Прежде чем я уйду!",
+               "dialog_title" : "Чтец",               
+               "dialog_title1" : "Послушник Лэндон",
+               "dialog_title2" : "Сестра Дженна",
+               "trade_details": "Привет [str(i18n_data.town_name)]! Церковь нуждается в некоторых предметах. Если вы сделаете для нас [str(i18n_data.want_number)] [str(i18n_data.want_item)], то я вернусь через [str(i18n_data.num_days)] дней и мы будет очень вам благодарны, за данную щедрость, мы дадим вам: [str(i18n_data.reward_number)] [str(i18n_data.reward_item)]. Если вы сделаете нам ещё: [str(i18n_data.optional_want_number)] [str(i18n_data.optional_want_item)]. Дополнительно мы дадим вам [str(i18n_data.optional_reward_number)] [str(i18n_data.optional_reward_item)].",
+               "waiting_title": "Сестра Дженна вернётся через [str(i18n_data.hour_counter)] часов!",
+               "waiting_text": "Сестра Дженна вернётся через [str(i18n_data.hour_counter)] часов, чтобы дать вам [str(i18n_data.reward_number)] [str(i18n_data.reward_item)] если у вас будет готово для неё [str(i18n_data.want_number)] [str(i18n_data.want_item)]. Если у вас дополнительно будет [str(i18n_data.optional_want_number)] [str(i18n_data.optional_want_item)], она подарит вам ещё [str(i18n_data.optional_reward_number)] [str(i18n_data.optional_reward_item)]!",
+               "rejected_title": "Церковь",
+               "rejected_text": "Возможно, требуя у вас [str(i18n_data.want_number)] [str(i18n_data.want_item)] это слишком много. Я понимаю. Возможно тяжело будет получить столько, особенно для такого маленького города, особенно, а уж просить что-то дополнительно... Я вернусь в другой раз.",
+               "return_title": "Сестра Дженна возвращается!",
+               "return_greetings_positive": "Отлично! Вы сделали для меня [str(i18n_data.want_number)] [str(i18n_data.want_item)]. Вы хотите отдать мне? Я дам вам [str(i18n_data.reward_number)] [str(i18n_data.reward_item)] Неплохо звучит, а?",
+               "return_greetings_excellent": "Здорово! Вы сделали для меня [str(i18n_data.want_number)] [str(i18n_data.want_item)] , вы сделали даже [str(i18n_data.optional_want_number)] [str(i18n_data.optional_want_item)]! Вы хотите мне их отдать? За это я дам вам [str(i18n_data.reward_number)] [str(i18n_data.reward_item)] и дополнительно [str(i18n_data.optional_reward_number)] [str(i18n_data.optional_reward_item)] Неплохо правда?",
+               "return_greetings_negative": "Я вернулся, но кажется вы не сделали [str(i18n_data.want_number)] [str(i18n_data.want_item)], которые я просил. Ну да ладно, бедные и голодные сиротки в приюте поймут... я уверен..."
+                  }
+               } 
+            }
+         }
+      }
+   },
+   "data": {
+      "buffs": {
+         "shivering": {
+            "shivering_buff_1": {
+               "display_name": "Прохладно",
+               "description": "Брррр!"
+            },
+            "shivering_buff_2": {
+               "display_name": "Холодно",
+               "description": "Стал медленее от холода"
+            },
+            "shivering_buff_3": {
+               "display_name": "Замерз",
+               "description": "Сильно замёрз. Дайте что-нибудь тёплое!"
+            }
+         },
+         "comfy_clothes": {
+            "comfy_clothes_buff": {
+               "display_name": "Тёплая одежда",
+               "description": "Носит тёплую одежду, которая защищает от холода"
+            }
+         },
+         "warm_food": {
+            "warm_food_buff": {
+               "display_name": "Горячая еда",
+               "description": "Недавно получил горячую пищу, немного защищает от холода"
+            }
+         }
+      },
+      "commands": {
+         "open_present": {
+            "display_name": "Распаковать подарок",
+            "description": "Открой и получи заслуженный подарок!"
+         }
+      }
+   },   
+   "jobs": {
+      "generic": {
+            "offering" : "Подарки",
+            "decorations" : "Украшения",
+            "building_parts" : "Строительные части"
+      },
+      "blacksmith": {
+         "winter_blacksmith_outfit": {
+            "display_name": "Зимнее одеяние кузнеца",
+            "description": "Тяжёлое шерстяное пальто, для холодных зимних ночей",
+            "winter_blacksmith_outfit_iconic": {
+               "display_name": "Зимнее одеяние кузнеца",
+               "description": "Так тепло..."
+            }
+         },
+         "recipes" : {
+            "frostfeast_iron_double_door_recipe" : {
+               "recipe_name" : "Двойная железная дверь Снежного фестиваля",
+               "description" : "Праздничная железная двойная дверь",
+               "flavor" : ""
+            },
+            "frostfeast_iron_door_recipe" : {
+               "recipe_name" : "Железная дверь Снежного фестиваля",
+               "description" : "Праздничная железная дверь",
+               "flavor" : ""
+            },                           
+            "frostfeast_lights_recipe" : {
+               "recipe_name" : "Огни Снежного фестиваля",
+               "description" : "Используя металл, стекло и проволку, можно создать праздничное оформление",
+               "flavor" : ""
+            },
+            "frostfeast_candle_recipe" : {
+               "recipe_name" : "Свеча Снежного фестиваля",
+               "description" : "Праздничная свеча Снежного фестиваля",
+               "flavor" : ""
+            },
+            "festive_fighting_shield_recipe" : {
+               "recipe_name" : "Праздничный боевой щит",
+               "description" : "Война никогда не меняется..",
+               "flavor" : "Всё ещё горячий"
+            }                                       
+         }
+      },      
+      "carpenter": {
+         "winter_carpenter_outfit": {
+            "display_name": "Зимнее одеяние плотника",
+            "description": "Тяжелое шерстяное пальто, для холодных зимних ночей",
+            "winter_carpenter_outfit_iconic": {
+               "display_name": "Зимнее одеяние плотника",
+               "description": "Так тепло..."
+            }
+         },
+         "recipes" : {
+            "frostfeast_present_pile_recipe" : {
+               "recipe_name" : "Праздничный подарочный мешок Снежного фестиваля",
+               "description" : "Декоративная куча из подарков",
+               "flavor" : ""
+            },
+            "frostfeast_present_pile_tree_recipe" : {
+               "recipe_name" : "Праздничный подарочный мешок Снежного фестиваля",
+               "description" : "Декоративная куча подарков под дерево",
+               "flavor" : ""
+            },                           
+            "frostfeast_wreath_recipe" : {
+               "recipe_name" : "Праздничный венок",
+               "description" : "Традиционное украшение Снежного фестиваля",
+               "flavor" : ""
+            },             
+            "frostfeast_wooden_window_frame_recipe" : {
+               "recipe_name" : "Деревянная оконная рама Снежного фестиваля",
+               "description" : "Праздничная оконная рама",
+               "flavor" : ""
+            },             
+            "frostfeast_wooden_door_recipe" : {
+               "recipe_name" : "Деревянная дверь Снежного фестиваля",
+               "description" : "Праздничная дверь",
+               "flavor" : ""
+            },            
+            "frostfeast_wooden_double_door_recipe" : {
+               "recipe_name" : "Двойная деревянная дверь Снежного фестиваля",
+               "description" : "Праздничная двойная деревянная дверь",
+               "flavor" : ""
+            },            
+            "frostfeast_tree_recipe" : {
+               "recipe_name" : "Ёлка Снежного фестиваля",
+               "description" : "Традиционное украшение Снежного фестиваля",
+               "flavor" : ""
+            },
+            "frostfeast_comfy_bed_recipe" : {
+               "recipe_name" : "Роскошная удобная кровать",
+               "description" : "Очень тёплая и очень стильная",
+               "flavor" : ""
+            }                         
+         }         
+      },
+      "cook": {
+         "winter_cook_outfit": {
+            "display_name": "Зимнее одеяние повара",
+            "description": "Тяжелое шерстяное пальто, для холодных зимних ночей",
+            "winter_cook_outfit_iconic": {
+               "display_name": "Зимнее одеяние повара",
+               "description": "Так тепло..."
+            }
+         },
+         "recipes" : {
+            "pig_feed_recipe" : {
+               "recipe_name" : "Корм для свиней",
+               "description" : "Они это съедят",
+               "flavor" : ""
+            }                       
+         }         
+      },
+      "farmer": {
+         "winter_farmer_outfit": {
+            "display_name": "Зимнее одеяние фермера",
+            "description": "Тяжелое шерстяное пальто, для холодных зимних ночей",
+            "winter_farmer_outfit_iconic": {
+               "display_name": "Зимнее одеяние фермера",
+               "description": "Так тепло..."
+            }
+         }
+      },         
+      "mason": {
+         "winter_mason_outfit": {
+            "display_name": "Зимнее одеяние каменщика",
+            "description": "Тяжелое шерстяное пальто, для холодных зимних ночей",
+            "winter_mason_outfit_iconic": {
+               "display_name": "Зимнее одеяние каменщика",
+               "description": "Так тепло..."
+            }
+         },
+         "recipes" : {
+            "frostfeast_stone_window_frame_recipe" : {
+               "recipe_name" : "Каменная оконная рама Снежного фестиваля",
+               "description" : "Праздничная оконная рама",
+               "flavor" : ""
+            },             
+            "frostfeast_mosiac_2_recipe" : {
+               "recipe_name" : "Мозаика колокольчики Снежного фестиваля",
+               "description" : "Мозаика Снежного фестиваля",
+               "flavor" : "Праздничное украшение Снежного фестиваля"
+            },             
+            "frostfeast_mosiac_recipe" : {
+               "recipe_name" : "Мозаика дерево Снежного фестиваля",
+               "description" : "Мозаика Снежного фестиваля",
+               "flavor" : "Праздничное украшение Снежного фестиваля"
+            },            
+            "stone_heater_recipe" : {
+               "recipe_name" : "Каменный нагреватель",
+               "description" : "Источник тепла",
+               "flavor" : ""
+            },
+            "decorative_stone_chimney_recipe" : {
+               "recipe_name" : "Каменный камин",
+               "description" : "Согревает зимней ночью",
+               "flavor" : "Каменное сердце"
+            },
+            "frostfeast_stone_chimney_recipe" : {
+               "recipe_name" : "Каменный камин",
+               "description" : "Согревает зимней ночью",
+               "flavor" : "Каменное сердце..."
+            }
+         }         
+      },
+      "potter": {
+         "winter_potter_outfit": {
+            "display_name": "Зимнее одеяние гончара",
+            "description": "Тяжёлое, шерстяное пальто, для холодных зимних ночей",
+            "winter_potter_outfit_iconic": {
+               "display_name": "Зимнее одеяние гончара",
+               "description": "Так тепло..."
+            }
+         }
+      },
+      "shepherd": {
+         "winter_shepherd_outfit": {
+            "display_name": "Зимнее одеяние пастуха",
+            "description": "Тяжёлое, шерстяное пальто, для холодных зимних ночей",
+            "winter_shepherd_outfit_iconic": {
+               "display_name": "Зимнее одеяние пастуха",
+               "description": "Так тепло..."
+            }
+         }
+      },
+      "trapper": {
+         "winter_trapper_outfit": {
+            "display_name": "Зимнее одеяние зверолова",
+            "description": "Тяжёлое, шерстяное пальто, для холодных зимних ночей",
+            "winter_trapper_outfit_iconic": {
+               "display_name": "Зимнее одеяние зверолова",
+               "description": "Так тепло..."
+            }
+         }
+      },      
+      "weaver": {
+         "winter_weaver_outfit": {
+            "display_name": "Зимнее одеяние ткача",
+            "description": "Тяжёлое, шерстяное пальто, для холодных зимних ночей",
+            "winter_weaver_outfit_iconic": {
+               "display_name": "Зимнее одеяние ткача",
+               "description": "Так тепло..."
+            }
+         },
+         "recipes" : {
+            "plushie_toy_snowling_recipe" : {
+               "recipe_name" : "Плюшевый снеговик",
+               "description" : "♫ Хочешь слепить снеговика? ♫",
+               "flavor" : ""
+            },
+            "frostfeast_stocking_recipe" : {
+               "recipe_name" : "Чулок Снежного фестиваля",
+               "description" : "Носок, вешается на стену",
+               "flavor" : "Ты был послушным?"
+            },            
+            "frostfeast_rug" : {
+               "recipe_name" : "Ковёр Снежного фестиваля",
+               "description" : "Красивый, праздничный ковёр",
+               "flavor" : ""
+            },
+            "hunters_hat_recipe" : {
+               "recipe_name" : "Шапка охотника",
+               "description" : "Мягка шапка, подходит для всех.",
+               "flavor" : ""
+            },
+            "bobble_hat_recipe" : {
+               "recipe_name" : "Шапка пуделя",
+               "description" : "Мягка шапка, подходит для всех.",
+               "flavor" : ""
+            },
+            "reindeer_hat_recipe" : {
+               "recipe_name" : "Интересный экземпляр",
+               "description" : "Мягкая шапка",
+               "flavor" : ""
+            },                                   
+            "blacksmith_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд кузнеца",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Кузнец в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "carpenter_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд плотника",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Плотник в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "cook_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд повара",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Повар в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "farmer_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд фермера",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Фермер в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "mason_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд каменщика",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Каменщик в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "potter_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд гончара",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Гончар в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "shepherd_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд пастуха",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Пастух в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "trapper_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд зверолова",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Зверолов в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            },
+            "weaver_outfit_winter_recipe" : {
+               "recipe_name" : "Зимний наряд ткача",
+               "description" : "Тяжёлое шерстяное пальто, для холодных зимних ночей. Ткач в этой одежде передвигается на 10% быстрее и меньше страдает от холода.",
+               "flavor" : "Скоро зима!"
+            }                        
+         }
+      }
+   },   
+   "entities": {
+      "monsters": {
+         "goblins" : {
+            "goblin_light_pole" : {
+               "description": "Яркие огни! Яркие огни!",
+               "display_name": "Гоблинский фонарный столб"
+            },
+            "goblin_loot_chest" : {
+               "description": "Ты не хочешь это украсть?",
+               "display_name": "Большая куча подарков"
+            }  
+         }       
+      },       
+      "toys": {
+         "plushie_toy_snowling" : {
+            "plushie_toy_snowling_ghost" : {
+               "description": "♫ Хочешь слепить снеговика? ♫",
+               "display_name": "Плюшевый снеговик"
+            }
+         },
+         "frostfeast_present_pile" : {
+            "frostfeast_present_pile_ghost" : {
+               "description": "Декоративная куча подарков",
+               "display_name": "Подарок Снежного фестиваля"
+            }
+         },         
+         "frostfeast_present_pile_tree_ring" : {
+            "frostfeast_present_pile_tree_ring_ghost" : {
+               "description": "Декоративная куча подарков для новогодней ёлки",
+               "display_name": "Куча подарков под ёлку"
+            }
+         }          
+      },        
+      "construction": {
+         "frostfeast_wooden_double_door" : {
+            "frostfeast_wooden_double_door_ghost" : {
+               "description": "Праздничная двойная деревянная дверь ",
+               "display_name": "Двойная деревянная дверь Снежного фестиваля"
+            }
+         },
+         "frostfeast_iron_double_door" : {
+            "frostfeast_iron_double_door_ghost" : {
+               "description": "Двойная железная праздничная дверь",
+               "display_name": "Железная двойная дверь Снежного фестиваля"
+            }
+         },         
+         "frostfeast_wooden_door" : {
+            "frostfeast_wooden_door_ghost" : {
+               "description": "Праздничная дверь",
+               "display_name": "Деревянная дверь Снежного фестиваля"
+            }
+         },
+         "frostfeast_iron_door" : {
+            "frostfeast_iron_door_ghost" : {
+               "description": "Праздничная железная дверь",
+               "display_name": "Железная дверь Снежного фестиваля"
+            }
+         },         
+         "frostfeast_wooden_window_frame" : {
+            "frostfeast_wooden_window_frame_ghost" : {
+               "description": "Праздничная деревянная оконная рама",
+               "display_name": "Деревянная оконная рама Снежного фестиваля"
+            }
+         },
+         "frostfeast_stone_window_frame" : {
+            "frostfeast_stone_window_frame_ghost" : {
+               "description": "Праздничная каменная оконная рама",
+               "display_name": "Оконная рама Снежного фестиваля"
+            }
+         },         
+         "frostfeast_stone_chimney" : {
+            "frostfeast_stone_chimney_ghost" : {
+               "description": "Тёплый дом, начинается с тёплого сердца",
+               "display_name": "Каменный камин Снежного фестиваля"
+            }
+         }   
+      },  
+      "furniture": {
+         "frostfeast_comfy_bed" : {
+            "description": "Очень тёплая и стильная кровать",
+            "display_name": "Роскошая удобная крвать"
+         }        
+      },      
+      "armor": {
+         "hunter_hat" : {
+            "description": "Тёплая шапка охотника",
+            "display_name": "Охотничья шапка"
+         },
+         "bobble_hat" : {
+            "description": "Тёплая шапка пуделя",
+            "display_name": "Шапка пуделя"
+         },
+         "reindeer_hat" : {
+            "description": "Любопытный экземпляр",
+            "display_name": "Смешная шапка с рогами"
+         },
+         "fhois_hat" : {
+            "description": "Великолепная шапка Снежного фестиваля",
+            "display_name": "'ФМДАП' Шапка",
+            "flavor": "Ты выйграл интернет"
+         },
+         "festive_fighting_shield" : {
+            "description": "Война никогда не меняется...",
+            "display_name": "Праздничный боевой щит"
+         }          
+      },
+      "critters" : {
+         "pig": {
+            "pig_description": "Вакуум для еды",
+            "pig_display_name": "Свинья"
+         }
+      },
+      "wealth" : {
+         "offering": {
+            "blacksmith_description": "Подарок, сделанный кузнецом",
+            "blacksmith_display_name": "Дар кузнеца",
+            "carpenter_description": "Подарок сделанный плотником",
+            "carpenter_display_name": "Дар плотника",
+            "cook_description": "Подарок сделанный плотником",
+            "cook_display_name": "Дар повара",
+            "mason_description": "Подарок сделанный каменщиком",
+            "mason_display_name": "Дар каменщика",
+            "plentiful_description": "Подарок сделанный в церкви",
+            "plentiful_display_name": "Щедрый подарок",
+            "sublime_plentiful_description": "Подарок сделанный в церкви",
+            "sublime_plentiful_display_name": "Благословенный щедрый подарок",                           
+            "weaver_description": "Подарок сделанный ткачом",
+            "weaver_display_name": "Дар ткача"
+         }
+      },
+      "food": {
+         "figgy_pudding": {
+            "figgy_pudding": {
+               "display_name": "Фигувый пудинг",
+               "description": "Вкусный",
+               "flavor": "Нямням!"
+            },
+            "figgy_pudding_serving": {
+               "display_name": "Фигувый пудинг",
+               "description": "Вкусный"
+            }
+         },
+         "frostfeast_ham": {
+            "frostfeast_ham": {
+               "display_name": "Ветчина Снежного фестиваля",
+               "description": "Сочная и нежная",
+               "flavor": "Традиционное блюдо Снежного фестиваля!"
+            },
+            "frostfeast_ham_serving": {
+               "display_name": "Ветчина Снежного фестиваля",
+               "description": "Сочная и нежная"
+            }
+         },
+         "pig_meat": {
+               "display_name": "Свинина",
+               "description": "Подходит для жарки"
+         },         
+         "ginger": {
+            "display_name": "Имбирь",
+            "description": "Продукт для приготовления"
+         },
+         "pig_feed": {
+            "pig_feed": {
+               "display_name": "Корм для свиней",
+               "description": "Покорми их"
+            },
+            "pig_feed_ground": {
+               "display_name": "Корм для свиней",
+               "description": "Свиньи это любят."
+            }
+         },         
+         "ginger_bread": {
+            "ginger_bread": {
+               "display_name": "Имбирный хлеб",
+               "description": "Тёплый и вкусный",
+               "flavor": "Зимнее наслаждение"
+            },
+            "ginger_bread_serving": {
+               "display_name": "Имбирный хлеб",
+               "description": "Вкусно и согревает"
+            }
+         },                  
+         "pumpkin_soup": {
+            "pumpkin_soup": {
+               "display_name": "Тыквенный суп",
+               "description": "Мисква с супом",
+               "flavor": ""
+            },
+            "pumpkin_soup_serving": {
+               "display_name": "Тарелка тыквенного супа",
+               "description": "Замечательный."
+            }
+         },
+         "pumpkin_pie": {
+            "pumpkin_pie": {
+               "display_name": "Пирог из тыквы",
+               "description": "Лучше всего хранить на подоконнике",
+               "flavor": "Сладно и вкусно"
+            },
+            "pumpkin_pie_serving": {
+               "display_name": "Кисок пирога из тыквы",
+               "description": "Сладно и вкусно"
+            }
+         }                  
+      },
+      "plants": {
+         "fig": {
+            "fig_basket": {
+               "display_name": "Корзина с инжиром",
+               "description": "Сочный"
+            },
+            "fig_serving": {
+               "display_name": "Горсть инжира",
+               "description": "Сочный"
+            }
+         }                
+      },
+      "decoration": {
+         "frostfeast_snowling": {
+            "frostfeast_snowling": {
+               "display_name": "Снеговик",
+               "description": "♫ Давайте лепить снеговика? ♫"
+            }
+         },
+         "frostfeast_candle": {
+            "frostfeast_candle_ghost": {
+               "display_name": "Свеча Снежного фестиваля",
+               "description": "Роскошная свечка"
+            }
+         },                     
+         "frostfeast_mosiac": {
+            "frostfeast_mosiac_ghost": {
+               "display_name": "Мозаика Снежного фестиваля",
+               "description": "Прекрасная мозаика"
+            }
+         },
+         "frostfeast_mosiac_2": {
+            "frostfeast_mosiac_2_ghost": {
+               "display_name": "Мозаика колокольчики Снежного фестиваля",
+               "description": "Прекрасная мозаика"
+            }
+         },                    
+         "frostfeast_wreath": {
+            "frostfeast_wreath_ghost": {
+               "display_name": "Венок Снежного фестиваля",
+               "description": "Традиционное украшение Снежного фестиваля"
+            }
+         },
+         "frostfeast_stocking": {
+            "frostfeast_stocking_ghost": {
+               "display_name": "Чулок Снежного фестиваля",
+               "description": "Давай пошалим?"
+            }
+         },                  
+         "frostfeast_lights": {
+            "frostfeast_lights": {
+               "display_name": "Огни Снежного фестиваля",
+               "description": "Скрашивает время!",
+               "iconic_description": "Ты уже запутался?"
+            }
+         },
+         "frostfeast_rug": {
+            "frostfeast_rug_ghost": {
+               "display_name": "Ковёр Снежного фестиваля",
+               "description": "Праздничный ковёр"
+            }
+         },         
+         "frostfeast_tree": {
+            "frostfeast_tree": {
+               "display_name": "Дерево Снежного фестиваля",
+               "description": "Скрашивает время!",
+               "iconic_description": "Взгляни в окно..."
+            }
+         },
+         "stone_heater": {
+            "stone_heater": {
+               "display_name": "Каменный нагреватель",
+               "description": "Источник тепла",
+               "iconic_description": "Источник тепла"
+            }
+         },
+         "decorative_chimney_stack": {
+            "decorative_chimney_stack": {
+               "display_name": "Декоративная каменная дымовая труба",
+               "description": "Декоративная каменная дымовая труба",
+               "iconic_description": "Декоративная каменная дымовая труба"
+            }
+         }                    
+      },             
+      "crops": {
+         "fig_crop": {
+            "display_name": "Инжир",
+            "description": "Съедобный плод",
+            "growth_stage": {
+               "003": {
+                  "name": "Спелый инжир",
+                  "description": "Готов к сбору"
+               },
+               "002": {
+                  "name": "Не спелый инжир",
+                  "description": "Не готов к сбору"
+               },
+               "001": {
+                  "name": "Кустарник",
+                  "description": "Не готов к сбору"
+               },
+               "000": {
+                  "name": "Кустарник",
+                  "description": "Не готов к сбору"
+               },
+               "011": {
+                  "name": "Сгнивший инжир",
+                  "description": "Он мёртв."
+               }
+            }
+         },
+         "ginger_crop": {
+            "display_name": "Имбирь",
+            "description": "Морозостойкий ингридиент для приготовления",
+            "growth_stage": {
+               "003": {
+                  "name": "Зрелый имбирь",
+                  "description": "Готов к сбору!"
+               },
+               "002": {
+                  "name": "Имбирная груша",
+                  "description": "Не готов к сбору"
+               },
+               "001": {
+                  "name": "Имбирная груша",
+                  "description": "Не готов к сбору"
+               },
+               "000": {
+                  "name": "Саженец имбиря",
+                  "description": "Не готов к сбору"
+               },
+               "011": {
+                  "name": "Сгнивший имбирь",
+                  "description": "Он мёртв."
+               }
+            }
+         }               
+      }
+   }
+}   
+

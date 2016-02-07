@@ -1,8 +1,7 @@
 {
    "languages": {
       "ru": {
-         "display_name": "Русский",
-         "path": "file(translations/ru-RU.json)"
+         "display_name": "Русский"
       }
    }
 }

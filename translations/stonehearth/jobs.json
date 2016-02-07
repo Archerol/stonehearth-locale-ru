@@ -1,0 +1,112 @@
+{
+  "jobs": {
+    "mason": {
+      "mason_description": {
+        "display_name_": {
+          "р": "Каменщика",
+          "д": "Каменщику",
+          "т": "Каменщиком"
+        }
+      }
+    },
+    "carpenter": {
+      "carpenter_description": {
+        "display_name_": {
+          "р": "Плотника",
+          "д": "Плотнику",
+          "т": "Плотником"
+        }
+      }
+    },
+    "weaver": {
+      "weaver_description": {
+        "display_name_": {
+          "р": "Ткача",
+          "д": "Ткачу",
+          "т": "Ткачом"
+        }
+      }
+    },
+    "blacksmith": {
+      "blacksmith_description": {
+        "display_name_": {
+          "р": "Кузнеца",
+          "д": "Кузнецу",
+          "т": "Кузнецом"
+        }
+      }
+    },
+    "cook": {
+      "cook_description": {
+        "display_name_": {
+          "р": "Повара",
+          "д": "Повару",
+          "т": "Поваром"
+        }
+      }
+    },
+    "farmer": {
+      "farmer_description": {
+        "display_name_": {
+          "р": "Фермера",
+          "д": "Фермеру",
+          "т": "Фермером"
+        }
+      }
+    },
+    "footman": {
+      "footman_description": {
+        "display_name_": {
+          "р": "Солдата",
+          "д": "Солдату",
+          "т": "Солдатом"
+        }
+      }
+    },
+    "shepherd": {
+      "shepherd_description": {
+        "display_name_": {
+          "р": "Пастуха",
+          "д": "Пастуху",
+          "т": "Пастухом"
+        }
+      }
+    },
+    "trapper": {
+      "trapper_description": {
+        "display_name_": {
+          "р": "Зверолова",
+          "д": "Зверолову",
+          "т": "Звероловом"
+        }
+      }
+    },
+    "potter": {
+      "potter_description": {
+        "display_name_": {
+          "р": "Гончара",
+          "д": "Гончару",
+          "т": "Гончаром"
+        }
+      }
+    },
+    "herbalist": {
+      "herbalist_description": {
+        "display_name_": {
+          "р": "Травника",
+          "д": "Травнику",
+          "т": "Травником"
+        }
+      }
+    },
+    "worker": {
+      "worker_description": {
+        "display_name_": {
+          "р": "Рабочего",
+          "д": "Рабочему",
+          "т": "Рабочим"
+        }
+      }
+    }
+  }
+}

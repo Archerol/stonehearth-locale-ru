@@ -1,0 +1,595 @@
+{ 
+   "ui": {
+      "game": {
+         "common": {
+            "bye": "Пасека. Есть!"
+         },
+         "zones_mode": {
+            "pasture": {
+               "yak_pasture_name": "Пастбище яков",
+               "yak_pasture_description": "Яки дают молоко и мясо, два ценимых в готовке ингридиента.",
+               "pig_pen_name": "Свинарник",
+               "pig_pen_description": "Свиней можно пустить на мясо, а ещё они откапывают трюфели."
+            }
+         }
+      },
+      "data": {
+         "constants": {
+            "food_resource_name": "Пища",
+            "queen_bee_resource_name": "Королева пчёл",
+            "jerky_resource_name": "Вяленое мясо",
+            "water_resource_name": "Вода"
+         },
+         "gm" : {
+            "campaigns" : {
+               "bees" : {  
+                  "dialog_nodes" : { 
+                     "bulletin_message" : { 
+                        "000" : "Кажется, ваш чудесный городок привлёк стаю пчёл... И похоже, они собираются обосноваться в том необычном дереве. Погодите-ка, готов поклясться, там не было этого дерева!", 
+                        "001" : "Возможно, мы сможем извлечь из этого какую-то выгоду?", 
+                        "002" : "Предлагаю срубить это дерево и посмотреть, что будет дальше! Что вообще может пойти не так?!?", 
+                        "003" : "Ух ты! Нам очень повезло!", 
+                        "004" : "Кажется, они ошеломленны падением с дерева! Только представь, что бы было в обратном случае.", 
+                        "005" : "Давайте раскроем эти штучки и посмотрим, что внутри! Да что вообще может пойти не так?!? (Hint: Select the hives to kick them!)", 
+                        "006" : "Ай-ой, больно! Кто же мог подумать, что они такие злые?!", 
+                        "007" : "Ох, слабая боль и, возможно, анафилаксия - мизерная плата за всеобщее благо.", 
+                        "008" : "Ого! Жестко ты их... осталось совсем немного...", 
+                        "009" : "Не смотри на меня так... Я унесу всё, что удастся спасти, назад в город. Увидимся!", 
+                        "010" : "Я оставил всё, что смог, у флага. Странное, кстати, место для флага, в смысле, посмотри на него, это же глупо! Ладно, не об этом речь. Тебе следует построить пасеку, чтобы наш тяжелый труд не оказался напрасным."
+                     },
+                     "bulletin_title_001" : "Вы слышите слабое жужжание...", 
+                     "bulletin_title_002" : "Жужжание становится громче...", 
+                     "bulletin_title_003" : "Жужжание утихает...",
+                     "bulletin_title_004" : "Это снова я!",
+                     "dialog_title_001"   : "Полезный Поселенец"
+                  }
+               } 
+            }
+         }
+      }
+   },
+   "data": {
+      "buffs": {
+         "well_fed": {
+            "well_fed": {
+               "display_name" : "Сытый",
+               "description"  : "Больше каллорий - усерднее труд"
+            }
+         }
+      },
+      "commands": {
+         "harvest_honey": {
+            "display_name" : "Собрать мёд",
+            "description"  : "Собрать мёд",
+            "disabled_description": "Пчёлы всё ещё работают!"
+         },
+         "harvest_water": {
+            "display_name" : "Набрать воды",
+            "description"  : "Набрать воды",
+            "disabled_description": "Ведро всё ещё наполняется!"
+         },
+         "smash_beehive": {
+            "display_name" : "Разгромить улей",
+            "description"  : "Давай! Пни его!"
+         }
+      }
+   },
+   "jobs": {
+      "carpenter": {
+         "recipes" : {
+            "apiary_recipe" : {
+               "recipe_name" : "Пасека",
+               "description" : "Позволяет собирать мёд.",
+               "flavor" : "Золотой нектар"
+            },
+            "wind_sail_recipe" : {
+               "recipe_name" : "Мельничные лопасти",
+               "description" : "Стандартные мельничные лопасти.",
+               "flavor" : "А здесь ветренно..."
+            },
+            "cook_sign_recipe" : {
+               "recipe_name" : "Настенная вывеска повара",
+               "description" : "Вывеска с символом повара для установки на строения.",
+               "flavor" : ""
+            }
+         }
+      },
+      "cook": {
+         "recipes" : {
+            "berry_juice_recipe" : {
+               "recipe_name" : "Ягодный сок",
+               "description" : "Восхитительный ягодный сок.",
+               "flavor"      : "Освежающий напиток из толчёных ягод и воды."
+            },
+            "berry_pie_recipe" : {
+               "recipe_name" : "Ягодный пирог",
+               "description" : "Вкусный ягодный пирог.",
+               "flavor"      : "Лёгкая корочка, наполненная спелыми ягодами."
+            },
+            "boiled_rice_recipe" : {
+               "recipe_name" : "Вареный рис",
+               "description" : "Безвкусное, но сытное блюдо.",
+               "flavor"      : ""
+            },
+            "rice_pudding_recipe" : {
+               "recipe_name" : "Рисовый пудинг",
+               "description" : "Восхитительный десерт из риса и молока.",
+               "flavor"      : "Спелые ягоды довершают блюдо."
+            },                        
+            "cheese_recipe" : {
+               "recipe_name" : "Сыр",
+               "description" : "Твёрдый сыр.",
+               "flavor"      : "С сыром всегда вкуснее!"
+            },
+            "cake_recipe" : {
+               "recipe_name" : "Торт",
+               "description" : "Потрясающий торт!",
+               "flavor"      : "Для тортика всегда местечко найдётся."
+            },            
+            "grits_recipe" : {
+               "recipe_name" : "Овсянка",
+               "description" : "Безвкусное блюдо из крупы.",
+               "flavor"      : "Пожалуйста, сэр, ни ложкой больше!"
+            },
+            "honey_berry_wine_recipe" : {
+               "recipe_name" : "Медово-ягодное вино",
+               "description" : "Чудесное ягодное вино, креплёное мёдом.",
+               "flavor"      : "Освежающий напиток из толчёных ягод, воды и мёда."
+            },
+            "honey_glazed_critter_recipe" : {
+               "recipe_name" : "Жаренная тушка в мёде",
+               "description" : "Идеальная прожаренная туша, глазированная мёдом.",
+               "flavor"      : "С мёдом всё вкуснее, верно?"
+            },
+            "meat_and_potato_pie_recipe" : {
+               "recipe_name" : "Картофельно-мясной пирог",
+               "description" : "Мучной корж с превосходной мясной начинкой.",
+               "flavor"      : "Полезно и вкусно."
+            },
+            "meat_pie_recipe" : {
+               "recipe_name" : "Мясной пирог",
+               "description" : "Вкусный мясной пирог.",
+               "flavor"      : "Улов охотника в оболочке из теста."
+            },
+            "pig_feed_recipe" : {
+               "recipe_name" : "Свинной корм",
+               "description" : "Если это съедобно, то они его съедят.",
+               "flavor" : ""
+            },
+            "sheep_feed_recipe" : {
+               "recipe_name" : "Животный корм",
+               "description" : "Подходит для яков и овец.",
+               "flavor" : ""
+            },            
+            "pottage_recipe" : {
+               "recipe_name" : "Похлёбка",
+               "description" : "Сытное блюдо из овощей и зерна.",
+               "flavor"      : "Сытно!"
+            },            
+            "pumpkin_pie_recipe" : {
+               "recipe_name" : "Тыквенный пирог",
+               "description" : "Тыквы и пироги. Чего ж ещё?",
+               "flavor"      : "Вкусные сладости."
+            },
+            "pumpkin_soup_recipe" : {
+               "recipe_name" : "Тыквенный суп",
+               "description" : "Полезный тыквенный суп.",
+               "flavor"      : "Сладенький и аппетитный."
+            },            
+            "roast_critter_recipe" : {
+               "recipe_name" : "Жаренная тушка",
+               "description" : "Идеально прожаренная туша.",
+               "flavor"      : "На вкус как курица"
+            },
+            "roast_ham_recipe" : {
+               "recipe_name" : "Свинное жаркое",
+               "description" : "И очень вкусное.",
+               "flavor" : ""
+            },
+            "roast_beef_recipe" : {
+               "recipe_name" : "Говяжье жаркое",
+               "description" : "Сытное жаркое.",
+               "flavor" : ""
+            }
+         }
+      },
+      "mason": {
+         "recipes" : {
+            "well_recipe" : {
+               "recipe_name" : "Каменный колодец",
+               "description" : "Источник чистой воды.",
+               "flavor"      : "Берегись, Джессика Макклюр!"
+            }
+         }
+      },
+      "weaver": {
+         "recipes" : {
+            "cook_outfit_2_recipe" : {
+               "recipe_name" : "Чудесная одежда повара",
+               "description" : "Хорошее одеяние для хорошего повара!",
+               "flavor"      : "Оно чудесно!"
+            }
+         }
+      }
+   },
+   "entities": {       
+      "construction": {
+         "apiary" : {
+            "apiary" : {
+               "description"  : "Производит мёд.",
+               "display_name" : "Пасека"
+            },
+            "apiary_ghost" : {
+               "description"  : "Производит мёд.",
+               "display_name" : "Пасека"
+            }            
+         },
+         "well" : {
+            "well" : {
+               "description"  : "Источник чистой воды.",
+               "display_name" : "Каменный колодец"
+            },
+            "well_ghost" : {
+               "description"  : "Источник чистой воды.",
+               "display_name" : "Каменный колодец"
+            }            
+         }
+      },
+      "critters" : {
+         "pig": {
+            "description" : "Неприхотливый генератор пищи.",
+            "display_name": "Свинья"
+         },
+         "bees": {
+            "tree_description"   : "Похоже, оно жужжит...",
+            "tree_display_name"  : "Странное дерево",
+            "hive_description"   : "Обращайтесь осторожно!",
+            "hive_display_name"  : "Огромный улей",            
+            "queen_description"  : "♫ She's Your Queeeeeeen to beeeeeee! ♫",
+            "queen_display_name" : "Неоспоримая Королева пчёл"
+         },         
+         "yak": {
+            "description" : "Медленный и вонючий.",
+            "display_name": "Як"
+         }
+      },
+      "decoration" : {
+         "wind_sail": {
+            "description" : "♫ You spin me right round baby right round..♫",
+            "display_name": "Мельничные лопасти"
+         },        
+         "cook_sign": {
+            "description" : "Вывеска с символом повара для установки на строения.",
+            "display_name": "Настенная вывеска повара"
+         }
+      },      
+      "food": {
+         "honey_vat": {
+            "honey_vat" : {
+               "display_name" : "Кадка мёда",
+               "description"  : "Кадка превосходного мёда",
+               "flavor"       : "Вкуснотища!"
+            },
+            "honey_vat_serving" : {
+               "display_name" : "Чаша мёда",
+               "description"  : "Чаша превосходного мёда"
+            }
+         },
+         "water": {
+            "water": {
+               "display_name" : "Ведро воды",
+               "description"  : "Содержит дигидроген монооксид.",
+               "flavor"       : "Освежает!"
+            },
+            "water_serving": {
+               "display_name" : "Чаша воды",
+               "description"  : "Содержит дигидроген монооксид."
+            }           
+         },
+         "milk": {
+            "milk": {
+               "display_name" : "Цистерна молока",
+               "description"  : "Без добавления консервантов",
+               "flavor"       : "Освежает!"
+            },
+            "milk_serving": {
+               "display_name" : "Чаша молока",
+               "description"  : "Освежает!"
+            }           
+         },                   
+         "berry_juice" : {
+            "berry_juice" : {
+               "display_name" : "Ягодный сок",
+               "description"  : "Восхитительный ягодный сок.",
+               "flavor"       : "Освежающий напиток из толчёных ягод и воды."
+            },
+            "berry_juice_serving" : {
+               "display_name" : "Кружка ягодного сока",
+               "description"  : "Восхитительный ягодный сок."
+            }            
+         },
+         "boiled_rice" : {
+            "boiled_rice" : {
+               "display_name" : "Вареный рис",
+               "description"  : "Стандартный источник питательных веществ.",
+               "flavor"       : "Простое блюдо из риса и воды."
+            },
+            "boiled_rice_serving" : {
+               "display_name" : "Тарелка вареного риса",
+               "description"  : "Безвкусная, но сытная пища."
+            }            
+         },
+         "cake" : {
+            "cake" : {
+               "display_name" : "Торт",
+               "description"  : "Восхитительный торт.",
+               "flavor"       : ""
+            },
+            "cake_serving" : {
+               "display_name" : "Кусочек тортика",
+               "description"  : "Божественно."
+            }            
+         },         
+         "rice_pudding" : {
+            "rice_pudding" : {
+               "display_name" : "Рисовый пудинг",
+               "description"  : "Десерт из риса и молока.",
+               "flavor"       : ""
+            },
+            "rice_pudding_serving" : {
+               "display_name" : "Рисовый пудинг",
+               "description"  : "Восхитителен с небольшим добавлением джема."
+            }            
+         },                  
+         "berry_pie" : {
+            "berry_pie" : {
+               "display_name" : "Ягодный пирог",
+               "description"  : "Вкусный ягодный пирог.",
+               "flavor"       : "Лёгкая корочка, наполненная спелыми ягодами."
+            },
+            "berry_pie_serving" : {
+               "display_name" : "Кусочек ягодного пирога",
+               "description"  : "Восхитительное угощение."
+            }            
+         },
+         "cheese" : {
+            "cheese" : {
+               "display_name" : "Сыр",
+               "description"  : "Твёрдый сыр.",
+               "flavor"       : "С сыром всегда вкуснее."
+            },
+            "cheese_serving" : {
+               "display_name" : "Порция сыра",
+               "description"  : "Сырно - не бака!"
+            }            
+         },
+         "grits" : {
+            "grits" : {
+               "display_name" : "Овсянка",
+               "description"  : "Безвкусное блюдо из крупы.",
+               "flavor"       : "Пожалуйста, сэр, ни ложкой больше!"
+            },
+            "grits_serving" : {
+               "display_name" : "Тарелка овсянка",
+               "description"  : "Добрая порция овсяных хлопьев."
+            }
+         },
+         "honey_berry_wine" : {
+            "honey_berry_wine" : {
+               "display_name" : "Медово-ягодное вино",
+               "description"  : "Чудесное ягодное вино, креплёное мёдом.",
+               "flavor"       : "Освежающий напиток из толчёных ягод, воды и мёда."
+            },
+            "honey_berry_wine_serving" : {
+               "display_name" : "Кружка ягодного вина",
+               "description"  : "Вкусное и освежает"
+            }
+         },
+         "honey_glazed_critter" : {
+            "honey_glazed_critter" : {
+               "display_name" : "Жаренная тушка в мёде",
+               "description"  : "Идеальная прожаренная туша, глазированная мёдом.",
+               "flavor"       : "С мёдом всё вкуснее, верно?"
+            },
+            "honey_glazed_critter_serving" : {
+               "display_name" : "Порция жаренной тушки в мёде",
+               "description"  : "На вкус как курица."
+            }
+         },
+         "meat_and_potato_pie" : {
+            "meat_and_potato_pie" : {
+               "display_name" : "Картофельно-мясной пирог",
+               "description"  : "Мучной корж с превосходной мясной начинкой.",
+               "flavor"       : "Сытно и вкусно."
+            },
+            "meat_and_potato_pie_serving" : {
+               "display_name" : "Кусочек картофельно-мясного пирога",
+               "description"  : "Сытно и вкусно."
+            }               
+         },
+         "meat_pie" : {
+            "meat_pie" : {
+               "display_name" : "Мясной пирог",
+               "description"  : "Вкусный мясной пирог.",
+               "flavor"       : "Улов охотника в оболочке из теста."
+            },
+            "meat_pie_serving" : {
+               "display_name" : "Кусочек мясного пирога",
+               "description"  : "Вкусный мясной пирог."
+            }
+         },
+         "sheep_feed" : {
+            "sheep_feed" : {
+               "display_name" : "Животный корм",
+               "description"  : "Подходит для яков и овец.",
+               "flavor"       : ""
+            },
+            "sheep_feed_ground" : {
+               "display_name" : "Животный корм",
+               "description"  : "Подходит для яков и овец."
+            }
+         },         
+         "pig_feed" : {
+            "pig_feed" : {
+               "display_name" : "Свинной корм",
+               "description"  : "If it's edible they'll eat it",
+               "flavor"       : ""
+            },
+            "pig_feed_ground" : {
+               "display_name" : "Pig Feed",
+               "description"  : "Если это съедобно, то они его съедят."
+            }
+         },
+         "pig_meat" : {
+            "display_name" : "Мясо свиньи",
+            "description"  : "Сочная свинина."
+         }, 
+         "yak_meat" : {
+            "display_name" : "Мясо яка",
+            "description"  : "Сочная говядина."
+         },                  
+         "pumpkin_pie" : {
+            "pumpkin_pie" : {
+               "display_name" : "Тыквенный пирог",
+               "description"  : "Лучше всего оставлять на подоконнике.",
+               "flavor"       : "Сладкий и вкусный."
+            },
+            "pumpkin_pie_serving" : {
+               "display_name" : "Кусочек тыквенного пирога",
+               "description"  : "Вкуснотища!"
+            }
+         },
+         "pumpkin_soup" : {
+            "pumpkin_soup" : {
+               "display_name" : "Тыквенный суп",
+               "description"  : "Полезный тыквенный суп.",
+               "flavor"       : "Сладенький и аппетитный."
+            },
+            "pumpkin_soup_serving" : {
+               "display_name" : "Тарелка тыквенного супа",
+               "description"  : "Питательный тыквенный суп."
+            }
+         },
+         "pottage" : {
+            "pottage" : {
+               "display_name" : "Похлёбка",
+               "description"  : "Большая тарелка похлёбки.",
+               "flavor"       : "Вкусно."
+            },
+            "pottage_serving" : {
+               "display_name" : "Тарелка похлёбки",
+               "description"  : "Вкусно."
+            }
+         },                     
+         "roast_critter" : {
+            "roast_critter" : {
+               "display_name" : "Жаренная тушка",
+               "description"  : "Идеально прожаренная тушка.",
+               "flavor"       : "На вкус как курица."
+            },
+            "roast_critter_serving" : {
+               "display_name" : "Порция жаренной тушки",
+               "description"  : "Идеально прожаренная тушка."
+            }
+         },
+         "roast_ham" : {
+            "roast_ham" : {
+               "display_name" : "Свинное жаркое",
+               "description"  : "Сытное жаркое.",
+               "flavor"       : ""
+            },
+            "roast_ham_serving" : {
+               "display_name" : "Порция свинного жаркого",
+               "description"  : "Сытное жаркое."
+            }
+         },
+         "roast_beef" : {
+            "roast_beef" : {
+               "display_name" : "Говяжье жаркое",
+               "description"  : "Сытное жаркое.",
+               "flavor"       : ""
+            },
+            "roast_beef_serving" : {
+               "display_name" : "Порция говяжьего жаркого",
+               "description"  : "Сытное жаркое."
+            }
+         }                
+      },
+      "plants": {
+         "potato": {
+            "potato_basket": {
+               "display_name": "Корзинка картофеля",
+               "description": "Готова к употреблению."
+            },
+            "potato_serving": {
+               "display_name": "Порция картофеля",
+               "description": "На вкус не очень."
+            }
+         },
+         "rice": {
+            "rice_basket": {
+               "display_name": "Мешок риса",
+               "description": "Готов к употреблению."
+            }
+         }  
+      },             
+      "crops": {
+         "potato_crop": {
+            "display_name": "Картошка",
+            "description": "Горячая голова.",
+            "growth_stage": {
+               "004": {
+                  "name": "Созревшая картошка",
+                  "description": "Пора собирать!"
+               },
+               "001": {
+                  "name": "Картофельный саженец",
+                  "description": "Ещё рано собирать."
+               },
+               "002": {
+                  "name": "Картофельный побег",
+                  "description": "Ещё рано собирать."
+               },
+               "003": {
+                  "name": "Молодой картофель.",
+                  "description": "Ещё рано собирать."
+               },
+               "007": {
+                  "name": "Гнилой картофель",
+                  "description": "Он мёртв."
+               }
+            }
+         },
+         "rice_crop": {
+            "display_name": "Рис",
+            "description": "Простая и доступная еда.",
+            "growth_stage": {
+               "005": {
+                  "name": "Созревший рис",
+                  "description": "Пора собирать!"
+               },
+               "001": {
+                  "name": "Саженец риса",
+                  "description": "Ещё рано собирать."
+               },
+               "002": {
+                  "name": "Саженец риса",
+                  "description": "Ещё рано собирать."
+               },
+               "003": {
+                  "name": "Саженец риса",
+                  "description": "Ещё рано собирать."
+               },
+               "004": {
+                  "name": "Саженец риса",
+                  "description": "Можно собирать."
+               },               
+               "007": {
+                  "name": "Гнилой рис",
+                  "description": "Он мёртв."
+               }
+            }
+         }                         
+      }
+   }
+}   

@@ -1,0 +1,271 @@
+{
+   "ui": {
+      "game": {
+         "candledark": {
+            "uh_what": "Э-э..Что?",
+            "such_as": "Так как?",
+            "berry_wine": "Ты снова напился Ягодного вина??",
+            "urm_thanks": "Хмм..Спасибо!",
+            "dialog_nodes" : {
+               "bulletin_message" : {
+                  "000" : "Здесь несколько предметов для начала. Твой плотник, может сделать баррикады против нежити.",
+                  "001" : "Усталый старик появляется у границ вашего города. Менее кривой, чем его спина и зубы ...",
+                  "002" : "'Привет! Приближается темносвечье, а вы даже ещё готовиться не начали!'",
+                  "003" : "'Вы знаете? Темносвечье! В это время, происходят странные вещи.''",
+                  "004" : "'Это... мёртвые... они начинаю двигаться. Прислушайтесь к предупреждениям старого Эльбезара и начинайте готовиться!'",
+                  "005" : "'Бах! Смейтесь, сколько хотите. Но лучше начинайте строить оборону, иначе будут неприятности!'",
+                  "006" : "'Через несколько дней, я вернусь с товарами для торговли, а пока, я научу ваших мастеров всему, что знаю.'",
+                  "007" : "'И так. Вы сделали это! Вы пережили темносвечье. Я экономил безделушки для особого случая и это тот самый случай. Наслаждайтесь! До следующего года ...",
+                  "008" : ""
+               },                                                                                          
+               "bulletin_title" : "Прежде чем я пойду!",
+               "bulletin_title2" : "Приближается дряхлый старик",
+               "bulletin_title3" : "Наконец всё закончилось!",
+               "dialog_title" : "Дряхлый старик"
+            }
+         },     
+         "entities" : {
+            "bite_notification" : "[name(i18n_data.entity)] был укушен.",
+            "turn_notification" : "[name(i18n_data.entity)] стал жертвой чумы."
+         }
+      }
+   },
+   "data": {
+      "names": {
+         "plagued": {
+            "male_name": "Безмозглое существо",
+            "female_name": "Безмозглое существо"
+         }
+      },       
+      "buffs": {
+         "plagued": {
+            "display_name": "Страдает",
+            "description": "Вообще не хорошо!"
+         }
+      },      
+      "commands": {
+         "smash_pinata": {
+            "display_name": "Разбить пиньяту",
+            "description": "Набита конфетами!"
+         }
+      },
+      "gm": {
+         "campaigns": {
+            "trader" : {
+               "candledark_shop": {
+                  "shop_info": {
+                     "name": "Безделушка темносвечья",
+                     "title": "Приближается повозка Эльбезара Мрачного камня!"
+                  }
+               }
+            },
+            "darkness" : {
+               "mission": {
+                  "sighted_bulletin": {
+                     "title": "Мертвецы начинают оживать!"
+                  }
+               }
+            }
+         }
+      }
+   },
+   "entities": {
+      "critters": {
+         "black_cat": {
+            "display_name": "Чёрная кошка",
+            "description": "Есть что-то зловещее в ней."
+         }
+      },
+      "construction": {
+         "cobblestone_fence_rail" : {
+            "cobblestone_fence_rail": {
+               "display_name": "Укреплённый каменный забор",
+               "description": "С дополнительной защитой."
+            },
+            "cobblestone_fence_rail_ghost": {
+               "display_name": "Укреплённый каменный забор",
+               "description": "С дополнительной защитой."
+            }
+         },
+         "spooky_fence_gate" : {
+            "spooky_fence_gate": {
+               "display_name": "Ворота темносвечья",
+               "description": "Усиленные, жуткие ворота!"
+            },
+            "spooky_fence_gate_ghost": {
+               "display_name": "Ворота темносвечья",
+               "description": "Усиленные, жуткие ворота!"
+            }
+         }         
+      },
+      "decoration": {
+         "scarecrow": {
+            "scarecrow_ghost": {
+               "display_name": "Простое чучело",
+               "description": "Страшное!"
+            },
+            "scarecrow_iconic": {
+               "display_name": "Простое чучело",
+               "description": "Требуется сборка."
+            }
+         },
+         "commemorative_tower_brazier": {
+            "commemorative_tower_brazier_ghost": {
+               "display_name": "Мемориальная жаровня",
+               "description": "Ты прошел темносвечье II!"
+            },
+            "commemorative_tower_brazier_iconic": {
+               "display_name": "Мемориальная жаровня",
+               "description": "Ты прошел темносвечье II!"
+            }
+         },         
+         "pinata": {
+            "pinata_ghost": {
+               "display_name": "Пиньята темносвечья",
+               "description": "Набита сладостями!"
+            },
+            "pinata_iconic": {
+               "display_name": "Пиньята темносвечья",
+               "description": "Надо повесить."
+            }
+         },         
+         "pumpkin_ward": {
+            "pumpkin_ward": {
+               "display_name": "Уходите мертвецы",
+               "description": "Тыква-страж"
+            },
+            "pumpkin_ward_lantern": {
+               "display_name": "Тыква-фонарь",
+               "description": "Уходите мертвецы"
+            },
+            "pumpkin_ward_hanging_lantern": {
+               "display_name": "Подвесной тыква-фонарь",
+               "description": "Уходите мертвецы"
+            }
+         },
+         "decorative_burial_mound": {
+            "decorative_burial_mound" : {
+               "description": "Традиционное украшение темносвечья.",
+               "display_name": "Декоративная могила"
+            }
+         }
+      },
+      "food": {
+         "candy_basket": {
+            "candy_basket": {
+               "display_name": "Корзина с конфетами",
+               "description": "Давай уже, это сладости!"
+            },
+            "candy_serving": {
+               "display_name": "Конфета",
+               "description": "Давай уже, это сладости!"
+            }
+         },
+         "pumpkin_soup": {
+            "pumpkin_soup": {
+               "display_name": "Тарелка супа из тыквы",
+               "description": "Пюре из тыквы, в чашке!"
+            },
+            "pumpkin_soup_serving": {
+               "display_name": "Порция тыквенного супа",
+               "description": "Вкусно."
+            }
+         },
+         "pumpkin_pie": {
+            "pumpkin_pie": {
+               "display_name": "Тыквенный пирог",
+               "description": "Лучше оставить на подоконнике!"
+            },
+            "pumpkin_pie_serving": {
+               "display_name": "Кусок тыквенного пирога",
+               "description": "Очень сладкий."
+            }
+         }                  
+      },
+      "toys": {
+         "plushie_toy_ghost": {
+            "plushie_toy_ghost": {
+               "display_name": "Плюшевое привидение",
+               "description": "Милый"
+            }
+         },
+         "plushie_toy_hanging_ghost": {
+            "plushie_toy_hanging_ghost": {
+               "display_name": "Подвесное плюшевое привидение",
+               "description": "Милый"
+            }
+         }         
+      },      
+      "pets": {
+         "bat": {
+            "display_name": "Летучая мышь",
+            "description": "...!"
+         }
+      }
+   },
+   "jobs": {
+      "weaver": {  
+      	"recipes": {
+            "plushie_toy_ghost_recipe": {
+               "description": "Традиционная игрушка темносвечья.",
+               "recipe_name": "Плюшевое привидение"
+            },
+            "plushie_toy_hanging_ghost_recipe": {
+               "description": "Традиционная игрушка темносвечья.",
+               "recipe_name": "Подвесное плюшевое привидение"
+            }          
+         }
+      },   	
+      "mason": {  
+      	"recipes": {
+            "decorative_burial_mound_recipe": {
+               "description": "Традиционное украшение темносвечья.",
+               "recipe_name": "Декоративная могила"
+            }
+         }
+      },
+      "blacksmith": {  
+         "recipes": {
+            "cobblestone_fence_rail_recipe": {
+               "description": "С дополнительной защитой.",
+               "recipe_name": "Укреплённый каменный забор"
+            },
+            "spooky_fence_gate_recipe": {
+               "description": "Укреплённые жуткие ворота!",
+               "recipe_name": "Ворота темносвечья"
+            }            
+         }
+      },      
+      "carpenter": {
+      	"recipes": {
+            "scarecrow_recipe": {
+               "description": "Традиционное украшение темносвечья.",
+               "recipe_name": "Простое чучело"
+            },
+            "pinata_recipe": {
+               "description": "Набита сладостями!",
+               "recipe_name": "Пиньята темносвечья"
+            }            
+         }
+      },
+      "cook": {
+         "recipes": {
+            "holiday_recipes" : {
+               "candledark_name" : "Праздничные рецепты"             
+            },
+            "pumpkin_ward_recipe": {
+               "description": "Традиционное украшение темносвечья.",
+               "recipe_name": "Тыква-страж"
+            },
+            "pumpkin_ward_lantern_recipe": {
+               "description": "Традиционное украшение темносвечья.",
+               "recipe_name": "Тыква-фонарь темносвечья"
+            },
+            "pumpkin_ward_hanging_lantern_recipe": {
+               "description": "Традиционное украшение темносвечья.",
+               "recipe_name": "Подвесной тыква-фонарь"
+            }
+         }
+      }
+   }
+}
